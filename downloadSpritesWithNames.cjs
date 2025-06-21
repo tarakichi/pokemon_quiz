@@ -1,15 +1,12 @@
 const fs = require("fs");
 const path = require("path");
 const axios = require("axios");
-
-// CommonJS環境でfetchを使うための工夫
 const fetch = (...args) =>
   import("node-fetch").then(({ default: fetch }) => fetch(...args));
 
 const saveDir = path.join(__dirname, "public", "sprites");
 if (!fs.existsSync(saveDir)) fs.mkdirSync(saveDir, { recursive: true });
 
-// 英語名・日本語名の対応リストを取得
 async function getPokemonList(limit = 898) {
   const url = `https://pokeapi.co/api/v2/pokemon?limit=${limit}`;
   const res = await fetch(url);
@@ -18,19 +15,20 @@ async function getPokemonList(limit = 898) {
   const list = [];
   for (const { name, url } of json.results) {
     try {
-        const speciesUrl = url.replace("/pokemon/", "/pokemon-species/");
-        const detail = await axios.get(speciesUrl).then(r => r.data);
-        const jpName = detail.names.find(n => n.language.name === "ja")?.name || name;
-        list.push({ en: name, ja: jpName });
-        console.log(`✅ Name mapped: ${name} → ${jpName}`);
-    } catch {
-        console.error(`❌ Name fetch failed: ${name}`);
+      const speciesUrl = url.replace("/pokemon/", "/pokemon-species/");
+      const detail = await axios.get(speciesUrl).then(r => r.data);
+      const jpName = detail.names.find(n => n.language.name === "ja")?.name || name;
+      const id = detail.id;
+
+      list.push({ id, en: name, ja: jpName });
+      console.log(`✅ Name mapped: ${id}: ${name} → ${jpName}`);
+    } catch (err) {
+      console.error(`❌ Name fetch failed: ${name}`);
     }
   }
   return list;
 }
 
-// ShowdownからスプライトをDL
 async function downloadSprite(en) {
   const url = `https://play.pokemonshowdown.com/sprites/gen5/${en}.png`;
   const filePath = path.join(saveDir, `${en}.png`);
