@@ -1,9 +1,13 @@
 import './App.css'
+import GenerationFilterQuiz from './components/GenerationFilterQuiz'
 import Quiz from './pages/quiz'
 
 function App() {
   return (
-    <Quiz/>
+    <>
+      <GenerationFilterQuiz/>
+      <Quiz/>
+    </>
   )
 }
 
