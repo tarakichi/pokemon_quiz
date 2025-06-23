@@ -227,7 +227,7 @@ async function getPokemonList(limit = 898) {
         generation,
         height,
         weight,
-        baseStats: stats,
+        base_stats: stats,
         abilities,
         is_legendary: isLegendary,
         is_mythical: isMythical,
