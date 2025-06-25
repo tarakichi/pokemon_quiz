@@ -102,7 +102,8 @@ export default function Game() {
                         </option>
                     ))}
                 </select>
-
+                <h3>スコア: {score}</h3>
+                <h3>{currentIndex} / {filteredlList.length} 問中</h3>
                 {isFinished && (
                     <div>
                         <h2>出題終了</h2>
@@ -116,7 +117,7 @@ export default function Game() {
                                 setScore(0);
                                 setIsFinished(false);
                             }}
-                            className="bg-blue-500 hover:bg-blue-600 test-white px-4 py-2 rounded"
+                            className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded"
                         >
                             もう一度
                         </button>
@@ -180,6 +181,9 @@ export default function Game() {
                     </>
                 )}
             </div>
+            <footer className="text-gray-500">
+                画像: Pokémon Showdown（© Nintendo / Game Freak / Creatures Inc.）
+            </footer>
         </div>
     )
 }
