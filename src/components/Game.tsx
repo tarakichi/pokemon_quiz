@@ -87,8 +87,78 @@ export default function Game() {
     };
 
     return (
-        <div className="p-4 max-w-xl mx-auto bg-indig-900">
-            <h1 className="text-2xl">ポケモンシルエットクイズ</h1>
+        <div className="p-4 h-fit w-full bg-indigo-50">
+            <div className="flex flex-col items-center">
+                <h1 className="text-2xl font-bold">ポケモンシルエットクイズ</h1>
+
+                {isFinished && (
+                    <div>
+                        <h2>出題終了</h2>
+                        <button
+                            onClick={() => {
+                                const reshuffled = [...filteredlList].sort(() => Math.random() - 0.5);
+                                setQuizPool(reshuffled);
+                                setCurrent(reshuffled[0]);
+                                setAnswer("");
+                                setReveald(false);
+                                setScore(0);
+                                setIsFinished(false);
+                            }}
+                        >
+                            もう一度
+                        </button>
+                    </div>
+                )}
+
+                {current && (
+                    <>
+                        <div className="bg-white rounded-2xl">
+                            <img
+                                src={`/sprites/${current.en}.png`}
+                                alt="シルエット"
+                                className={`w-48 h-48 ${reveald ? "" : "brightness-0"}`}
+                            />
+                        </div>
+                        <input
+                            type="text"
+                            value={answer}
+                            onChange={(e) => setAnswer(e.target.value)}
+                            onKeyDown={(e) => {
+                                if (e.key === "Enter") {
+                                    if (reveald) {
+                                        handleNext();
+                                    } else {
+                                        handleSubmit();
+                                    }
+                                }
+                                if (e.key === " ") {
+                                    e.preventDefault();
+                                    if (!reveald) setReveald(true);
+                                }
+                            }}
+                            className="border bg-white text-center"
+                            placeholder="名前を入力＜全角＞"
+                        />
+                        <div>
+                            <button
+                                onClick={handleSubmit}
+                                className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-1 rounded"
+                            >
+                                回答
+                            </button>
+                            <button
+                                onClick={() => setReveald(true)}
+                                className="bg-gray-500 hover:bg-gray-600 text-white px-4 py-1 rounded"
+                            >
+                                答え合わせ
+                            </button>
+                            {reveald && (
+                                <p className="font-bold text-xl">{current.ja}</p>
+                            )}
+                        </div>
+                    </>
+                )}
+            </div>
         </div>
     )
 }

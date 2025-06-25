@@ -1,4 +1,3 @@
-import './App.css'
 import Game from './components/Game'
 import GenerationFilterQuiz from './components/GenerationFilterQuiz'
 import Quiz from './components/quiz'
