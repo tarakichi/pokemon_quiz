@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import pokemonData from "../../pokemonNameMap.json";
 
-const quizPoolTypes = [
+const quizRangeTypes = [
     { category: "other", id: "all", label: "全てのポケモン"},
     { category: "generation", id: "generation-i", label: "第1世代" },
     { category: "generation", id: "generation-ii", label: "第2世代" },
@@ -36,7 +36,7 @@ type PokemonEntry = {
 }
 
 export default function Game() {
-    const [selectedQuizPoolType, setSelectedQuizPoolType] = useState(quizPoolTypes[1]);
+    const [selectedQuizRange, setSelectedQuizRange] = useState(quizRangeTypes[1]);
     const [quizPool, setQuizPool] = useState<PokemonEntry[]>([]);
     const [current, setCurrent] = useState<PokemonEntry | null>(null);
     const [answer, setAnswer] = useState<string>("");
@@ -44,12 +44,12 @@ export default function Game() {
     const [score, setScore] = useState<number>(0);
     const [isFinished, setIsFinished] = useState<boolean>(false);
     const filteredlList: PokemonEntry[] = useMemo(() => {
-        if (selectedQuizPoolType.category === "generation") {
-            return pokemonData.filter((p) => p.generation === selectedQuizPoolType.id);
+        if (selectedQuizRange.category === "generation") {
+            return pokemonData.filter((p) => p.generation === selectedQuizRange.id);
         } else {
             return pokemonData;
         }
-    }, [selectedQuizPoolType]);
+    }, [selectedQuizRange]);
     const currentIndex = filteredlList.length - quizPool.length + 1;
 
     useEffect(() => {
