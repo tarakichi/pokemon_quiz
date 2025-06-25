@@ -90,6 +90,18 @@ export default function Game() {
         <div className="p-4 h-fit w-full bg-indigo-50">
             <div className="flex flex-col items-center">
                 <h1 className="text-2xl font-bold">ポケモンシルエットクイズ</h1>
+                <label className="block">出題する世代：</label>
+                <select
+                    value={selectedQuizRange.id}
+                    onChange={(e) => setSelectedQuizRange(quizRangeTypes.find(q => q.id === e.target.value) || quizRangeTypes[0])}
+                    className="border px-2 py-1 rounded"
+                >
+                    {quizRangeTypes.map((q) => (
+                        <option key={q.id} value={q.id}>
+                            {q.label}
+                        </option>
+                    ))}
+                </select>
 
                 {isFinished && (
                     <div>
@@ -104,6 +116,7 @@ export default function Game() {
                                 setScore(0);
                                 setIsFinished(false);
                             }}
+                            className="bg-blue-500 hover:bg-blue-600 test-white px-4 py-2 rounded"
                         >
                             もう一度
                         </button>
@@ -153,9 +166,17 @@ export default function Game() {
                                 答え合わせ
                             </button>
                             {reveald && (
-                                <p className="font-bold text-xl">{current.ja}</p>
+                                <button
+                                    onClick={handleNext}
+                                    className="bg-green-500 hover:bg-green-600 text-white px-4 py-1 rounded"
+                                >
+                                    次へ
+                                </button>
                             )}
                         </div>
+                        {reveald && (
+                                <p className="font-bold text-xl">{current.ja}</p>
+                        )}
                     </>
                 )}
             </div>
