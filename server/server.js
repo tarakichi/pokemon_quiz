@@ -9,7 +9,7 @@ const server = http.createServer(app);
 const io = new Server(server, {
     cors: {
         origin: "http://localhost:5173",
-        methods: ["GET", "POST"]
+        // methods: ["GET", "POST"]
     }
 });
 
@@ -17,14 +17,14 @@ const PORT = process.env.port || 3001;
 
 app.use(cors());
 
-app.use(express.static(path.join(__dirname, "..", "client", "dist")));
+// app.use(express.static(path.join(__dirname, "..", "client", "dist")));
+
+// app.get("*", (req, res) => {
+//     res.sendFile(path.join(__dirname, "..", "client", "dist", "index.html"));
+// });
 
 app.get("/api/hello", (req, res) => {
     res.json({ message: "サーバーは動作中です！" });
-});
-
-app.get("*", (req, res) => {
-    res.sendFile(path.join(__dirname, "..", "client", "dist", "index.html"));
 });
 
 io.on("connection", (socket) => {
@@ -35,11 +35,11 @@ io.on("connection", (socket) => {
         io.emit("chat", msg);
     });
 
-    socket.on("disconect", () => {
+    socket.on("disconnect", () => {
         console.log("❌ 切断:", socket.id);
     })
 });
 
-app.listen(PORT, () => {
+server.listen(PORT, () => {
     console.log(`🚀 Server running at http://localhost:${PORT}`);
 });

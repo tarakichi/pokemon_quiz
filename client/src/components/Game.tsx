@@ -71,6 +71,7 @@ export default function Game() {
             setReveald(true);
             setScore((prev) => prev + 1);
         }
+        setAnswer("");
     };
 
     const handleNext = () => {
@@ -89,7 +90,9 @@ export default function Game() {
     return (
         <div className="p-4 h-fit w-full">
             <div className="flex flex-col items-center">
-                <h1 className="absolute overflow-hidden mb-5 text-6xl font-extrabold font-notosans text-gray-900/5 pointer-events-none z-0">Pokemon Silhouette Quiz</h1>
+                <h1 className="absolute mb-5 text-6xl font-extrabold font-notosans text-gray-900/5 pointer-events-none z-0">Pokemon</h1>
+                <h1 className="absolute mb-5 text-6xl font-extrabold font-notosans text-gray-900/5 pointer-events-none z-0">Silhouette</h1>
+                <h1 className="absolute mb-5 text-6xl font-extrabold font-notosans text-gray-900/5 pointer-events-none z-0">Quiz</h1>
                 <div className="z-10 flex items-center mb-5">
                     <label className="font-notosans font-light">出題する世代：</label>
                     <select
@@ -105,7 +108,7 @@ export default function Game() {
                     </select>
                 </div>
                 <div className="z-10 mb-5 flex flex-col items-center">
-                    <h3 className="mb-3 font-notosans font-light">スコア: {score}</h3>
+                    <h3 className="mb-1 font-notosans font-light">スコア: {score}</h3>
                     <h3 className="font-notosans font-light">{currentIndex} / {filteredlList.length} 問中</h3>
                 </div>
                 <div className="z-10 flex flex-col items-center">
@@ -130,6 +133,11 @@ export default function Game() {
                     )}
                     {current && (
                         <>
+                            {reveald ? (
+                                <p className="text-xl font-notosans font-medium mb-3">{current.ja}</p>
+                            ) : (
+                                <p className="text-xl font-notosans font-medium mb-3">???</p>
+                            )}
                             <div className="mb-7 bg-white rounded-2xl pointer-events-none shadow-xl ring-gray-900/5 select-none">
                                 <img
                                     src={`/sprites/${current.en}.png`}
@@ -157,7 +165,7 @@ export default function Game() {
                                 className="mb-3 border bg-white text-center font-notosans font-medium rounded"
                                 placeholder="名前を入力＜全角＞"
                             />
-                            <div>
+                            <div className="flex gap-3">
                                 <button
                                     onClick={handleSubmit}
                                     className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-1 rounded font-notosans font-light"
@@ -173,15 +181,12 @@ export default function Game() {
                                 {reveald && (
                                     <button
                                         onClick={handleNext}
-                                        className="bg-green-500 hover:bg-green-600 text-white px-4 py-1 rounded"
+                                        className="bg-green-500 hover:bg-green-600 text-white px-4 py-1 rounded font-notosans font-light"
                                     >
                                         次へ
                                     </button>
                                 )}
                             </div>
-                            {reveald && (
-                                    <p className="font-bold text-xl">{current.ja}</p>
-                            )}
                         </>
                     )}
                 </div>
