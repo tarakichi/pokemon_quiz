@@ -31,7 +31,7 @@ export default function Chat() {
     };
 
     return (
-        <div>
+        <div className="flex flex-col justify-center items-center">
             <h2>チャット</h2>
             <div>
                 {messages.map((m, i) => <div key={i}>{m}</div>)}
@@ -40,8 +40,9 @@ export default function Chat() {
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
                 onKeyDown={(e) => e.key === "Enter" && send()}
+                className="bg-white border"
             />
-            <button onClick={send}>送信</button>
+            <button onClick={send} className="bg-indigo-600 text-white rounded-md px-4 py-2">送信</button>
         </div>
     )
 }

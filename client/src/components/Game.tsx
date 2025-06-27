@@ -87,103 +87,105 @@ export default function Game() {
     };
 
     return (
-        <div className="p-4 h-fit w-full bg-indigo-50">
+        <div className="p-4 h-fit w-full">
             <div className="flex flex-col items-center">
-                <h1 className="text-2xl font-bold">ポケモンシルエットクイズ</h1>
-                <label className="block">出題する世代：</label>
-                <select
-                    value={selectedQuizRange.id}
-                    onChange={(e) => setSelectedQuizRange(quizRangeTypes.find(q => q.id === e.target.value) || quizRangeTypes[0])}
-                    className="border px-2 py-1 rounded"
-                >
-                    {quizRangeTypes.map((q) => (
-                        <option key={q.id} value={q.id}>
-                            {q.label}
-                        </option>
-                    ))}
-                </select>
-                <h3>スコア: {score}</h3>
-                <h3>{currentIndex} / {filteredlList.length} 問中</h3>
-                {isFinished && (
-                    <div>
-                        <h2>出題終了</h2>
-                        <button
-                            onClick={() => {
-                                const reshuffled = [...filteredlList].sort(() => Math.random() - 0.5);
-                                setQuizPool(reshuffled);
-                                setCurrent(reshuffled[0]);
-                                setAnswer("");
-                                setReveald(false);
-                                setScore(0);
-                                setIsFinished(false);
-                            }}
-                            className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded"
-                        >
-                            もう一度
-                        </button>
-                    </div>
-                )}
-
-                {current && (
-                    <>
-                        <div className="bg-white rounded-2xl">
-                            <img
-                                src={`/sprites/${current.en}.png`}
-                                alt="シルエット"
-                                className={`w-48 h-48 ${reveald ? "" : "brightness-0"}`}
-                            />
-                        </div>
-                        <input
-                            type="text"
-                            value={answer}
-                            onChange={(e) => setAnswer(e.target.value)}
-                            onKeyDown={(e) => {
-                                if (e.key === "Enter") {
-                                    if (reveald) {
-                                        handleNext();
-                                    } else {
-                                        handleSubmit();
-                                    }
-                                }
-                                if (e.key === " ") {
-                                    e.preventDefault();
-                                    if (!reveald) setReveald(true);
-                                }
-                            }}
-                            className="border bg-white text-center"
-                            placeholder="名前を入力＜全角＞"
-                        />
+                <h1 className="absolute overflow-hidden mb-5 text-6xl font-extrabold font-notosans text-gray-900/5 pointer-events-none z-0">Pokemon Silhouette Quiz</h1>
+                <div className="z-10 flex items-center mb-5">
+                    <label className="font-notosans font-light">出題する世代：</label>
+                    <select
+                        value={selectedQuizRange.id}
+                        onChange={(e) => setSelectedQuizRange(quizRangeTypes.find(q => q.id === e.target.value) || quizRangeTypes[0])}
+                        className="border px-2 py-1 rounded bg-white font-notosans font-medium text-center"
+                    >
+                        {quizRangeTypes.map((q) => (
+                            <option key={q.id} value={q.id}>
+                                {q.label}
+                            </option>
+                        ))}
+                    </select>
+                </div>
+                <div className="z-10 mb-5 flex flex-col items-center">
+                    <h3 className="mb-3 font-notosans font-light">スコア: {score}</h3>
+                    <h3 className="font-notosans font-light">{currentIndex} / {filteredlList.length} 問中</h3>
+                </div>
+                <div className="z-10 flex flex-col items-center">
+                    {isFinished && (
                         <div>
+                            <h2>出題終了</h2>
                             <button
-                                onClick={handleSubmit}
-                                className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-1 rounded"
+                                onClick={() => {
+                                    const reshuffled = [...filteredlList].sort(() => Math.random() - 0.5);
+                                    setQuizPool(reshuffled);
+                                    setCurrent(reshuffled[0]);
+                                    setAnswer("");
+                                    setReveald(false);
+                                    setScore(0);
+                                    setIsFinished(false);
+                                }}
+                                className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded"
                             >
-                                回答
+                                もう一度
                             </button>
-                            <button
-                                onClick={() => setReveald(true)}
-                                className="bg-gray-500 hover:bg-gray-600 text-white px-4 py-1 rounded"
-                            >
-                                答え合わせ
-                            </button>
-                            {reveald && (
-                                <button
-                                    onClick={handleNext}
-                                    className="bg-green-500 hover:bg-green-600 text-white px-4 py-1 rounded"
-                                >
-                                    次へ
-                                </button>
-                            )}
                         </div>
-                        {reveald && (
-                                <p className="font-bold text-xl">{current.ja}</p>
-                        )}
-                    </>
-                )}
+                    )}
+                    {current && (
+                        <>
+                            <div className="mb-7 bg-white rounded-2xl pointer-events-none shadow-xl ring-gray-900/5 select-none">
+                                <img
+                                    src={`/sprites/${current.en}.png`}
+                                    alt="シルエット"
+                                    className={`w-48 h-48 ${reveald ? "" : "brightness-0"}`}
+                                />
+                            </div>
+                            <input
+                                type="text"
+                                value={answer}
+                                onChange={(e) => setAnswer(e.target.value)}
+                                onKeyDown={(e) => {
+                                    if (e.key === "Enter") {
+                                        if (reveald) {
+                                            handleNext();
+                                        } else {
+                                            handleSubmit();
+                                        }
+                                    }
+                                    if (e.key === " ") {
+                                        e.preventDefault();
+                                        if (!reveald) setReveald(true);
+                                    }
+                                }}
+                                className="mb-3 border bg-white text-center font-notosans font-medium rounded"
+                                placeholder="名前を入力＜全角＞"
+                            />
+                            <div>
+                                <button
+                                    onClick={handleSubmit}
+                                    className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-1 rounded font-notosans font-light"
+                                >
+                                    回答
+                                </button>
+                                <button
+                                    onClick={() => setReveald(true)}
+                                    className="bg-gray-500 hover:bg-gray-600 text-white px-4 py-1 rounded font-notosans font-light"
+                                >
+                                    答え合わせ
+                                </button>
+                                {reveald && (
+                                    <button
+                                        onClick={handleNext}
+                                        className="bg-green-500 hover:bg-green-600 text-white px-4 py-1 rounded"
+                                    >
+                                        次へ
+                                    </button>
+                                )}
+                            </div>
+                            {reveald && (
+                                    <p className="font-bold text-xl">{current.ja}</p>
+                            )}
+                        </>
+                    )}
+                </div>
             </div>
-            <footer className="text-gray-500">
-                画像: Pokémon Showdown（© Nintendo / Game Freak / Creatures Inc.）
-            </footer>
         </div>
     )
 }
