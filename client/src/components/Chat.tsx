@@ -1,13 +1,14 @@
-import { useEffect, useState } from "react";
-import { io } from "socket.io-client";
-
-const socket = io("http://localhost:3001");
+import { useContext, useEffect, useState } from "react";
+import SocketContext from "../contexts/SocketContext";
 
 export default function Chat() {
+    const socket = useContext(SocketContext);
     const [messages, setMessegas] = useState<string[]>([]);
     const [input, setInput] = useState("");
 
     useEffect(() => {
+        if (!socket) return;
+
         socket.on("connect", () => {
             console.log("✅ クライアントが接続されました");
         });
@@ -23,7 +24,7 @@ export default function Chat() {
     }, []);
 
     const send = () => {
-        if (input) {
+        if (socket && input) {
             console.log("📤 送信:", input);
             socket.emit("chat", input);
             setInput("");
