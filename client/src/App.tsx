@@ -1,16 +1,14 @@
 import Chat from './components/Chat'
 import Game from './components/Game'
-import GenerationFilterQuiz from './components/GenerationFilterQuiz'
-import Quiz from './components/quiz'
 
 function App() {
   return (
-    <>
-      <Game/>
-      <Chat/>
-      <GenerationFilterQuiz/>
-      <Quiz/>
-    </>
+    <div className='min-h-screen bg-indigo-50 overflow-hidden'>
+      <div className='w-full max-w-screen-md mx-auto px-4 py-6'>
+        <Game/>
+        <Chat/>
+      </div>
+    </div>
   )
 }
 
