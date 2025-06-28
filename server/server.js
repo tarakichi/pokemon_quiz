@@ -23,12 +23,17 @@ const PORT = process.env.PORT || 3001;
 //     res.sendFile(path.join(__dirname, "..", "client", "dist", "index.html"));
 // });
 
+let connectedUsers = new Map();
+
 app.get("/api/hello", (req, res) => {
     res.json({ message: "サーバーは動作中です！" });
 });
 
 io.on("connection", (socket) => {
     console.log("🔌 ユーザー接続:", socket.id);
+    connectedUsers.set(socket.id, `ユーザー-${socket.id.slice(0, 4)}`);
+
+    io.emit("users", Array.from(connectedUsers.values()));
 
     socket.on("ping", () => {
         socket.emit("pong");
@@ -41,7 +46,9 @@ io.on("connection", (socket) => {
 
     socket.on("disconnect", () => {
         console.log("❌ 切断:", socket.id);
-    })
+        connectedUsers.delete(socket.id);
+        io.emit("users", Array.from(connectedUsers.values()));
+    });
 });
 
 server.listen(PORT, () => {
