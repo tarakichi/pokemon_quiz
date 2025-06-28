@@ -3,7 +3,7 @@ import SocketContext from "../contexts/SocketContext";
 
 export default function Chat() {
     const socket = useContext(SocketContext);
-    const [messages, setMessegas] = useState<string[]>([]);
+    const [messages, setMesseges] = useState<string[]>([]);
     const [input, setInput] = useState("");
 
     useEffect(() => {
@@ -15,16 +15,17 @@ export default function Chat() {
 
         socket.on("chat", (msg: string) => {
             console.log("📥 メッセージ受信:", msg);
-            setMessegas(prev => [...prev, msg]);
+            setMesseges(prev => [...prev, msg]);
         });
 
         return () => {
             socket.off("chat");
+            socket.off("connect")
         };
-    }, []);
+    }, [socket]);
 
     const send = () => {
-        if (socket && input) {
+        if (socket && input.trim()) {
             console.log("📤 送信:", input);
             socket.emit("chat", input);
             setInput("");

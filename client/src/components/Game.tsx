@@ -90,9 +90,9 @@ export default function Game() {
     return (
         <div className="p-4 h-fit w-full">
             <div className="flex flex-col items-center">
-                <h1 className="absolute mb-5 text-6xl font-extrabold font-notosans text-gray-900/5 pointer-events-none z-0">Pokemon</h1>
-                <h1 className="absolute mb-5 text-6xl font-extrabold font-notosans text-gray-900/5 pointer-events-none z-0">Silhouette</h1>
-                <h1 className="absolute mb-5 text-6xl font-extrabold font-notosans text-gray-900/5 pointer-events-none z-0">Quiz</h1>
+                <h1 className="absolute mb-5 text-6xl font-extrabold font-notosans text-gray-900/5 pointer-events-none z-0 left-3">Pokemon</h1>
+                <h1 className="absolute mb-5 text-6xl font-extrabold font-notosans text-gray-900/5 pointer-events-none z-0 left-3 top-30">Silhouette</h1>
+                <h1 className="absolute mb-5 text-6xl font-extrabold font-notosans text-gray-900/5 pointer-events-none z-0 left-3 top-45">Quiz</h1>
                 <div className="z-10 flex items-center mb-5">
                     <label className="font-notosans font-light">出題する世代：</label>
                     <select
