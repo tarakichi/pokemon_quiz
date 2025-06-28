@@ -35,8 +35,9 @@ io.on("connection", (socket) => {
 
     io.emit("users", Array.from(connectedUsers.values()));
 
-    socket.on("ping", () => {
-        socket.emit("pong");
+    socket.on("setName", (name) => {
+        connectedUsers.set(socket.id, name);
+        io.emit("users", Array.from(connectedUsers.values()));
     });
 
     socket.on("chat", (msg) => {

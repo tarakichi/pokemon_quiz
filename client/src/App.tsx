@@ -1,6 +1,7 @@
 import Chat from './components/Chat'
 import Game from './components/Game'
-import UserList from './components/UserList'
+import UserName from './components/UserName'
+import UserList from './components/UsersList'
 import SocketProvider from './contexts/SocketProvider'
 
 function App() {
@@ -10,6 +11,7 @@ function App() {
         <div className='w-full max-w-screen-md mx-auto px-4 py-6 bg-gray-100 rounded-2xl ring-gray-900/5 shadow-xl'>
           <Game/>
           <Chat/>
+          <UserName/>
           <UserList/>
         </div>
         <footer className="mt-3 text-gray-400 text-xs font-thin font-notosans text-center">

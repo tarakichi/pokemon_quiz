@@ -115,8 +115,8 @@ export default function Game() {
                 </div>
                 <div className="z-10 flex flex-col items-center">
                     {isFinished && (
-                        <div>
-                            <h2>出題終了</h2>
+                        <div className="flex flex-col items-center">
+                            <h2 className="mb-3">出題終了</h2>
                             <button
                                 onClick={() => {
                                     const reshuffled = [...filteredlList].sort(() => Math.random() - 0.5);
@@ -159,7 +159,7 @@ export default function Game() {
                                             handleSubmit();
                                         }
                                     }
-                                    if (e.key === " ") {
+                                    if (e.ctrlKey && e.key === "Enter") {
                                         e.preventDefault();
                                         if (!reveald) setReveald(true);
                                     }
