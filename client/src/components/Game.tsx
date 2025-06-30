@@ -2,7 +2,7 @@ import { useEffect, useMemo, useState } from "react";
 import pokemonData from "../../pokemonNameMap.json";
 
 const quizRangeTypes = [
-    { category: "other", id: "all", label: "全てのポケモン"},
+    { category: "all", id: "all", label: "全てのポケモン"},
     { category: "generation", id: "generation-i", label: "第1世代" },
     { category: "generation", id: "generation-ii", label: "第2世代" },
     { category: "generation", id: "generation-iii", label: "第3世代"},
@@ -12,6 +12,13 @@ const quizRangeTypes = [
     { category: "generation", id: "generation-vii", label: "第7世代"},
     { category: "generation", id: "generation-viii", label: "第8世代"},
     { category: "generation", id: "generation-ix", label: "第9世代"},
+    { category: "legendary", id: "legendary", label: "伝説のポケモン"},
+    { category: "basestats", id: "high-600", label: "種族値600以上のポケモン"},
+    { category: "basestats", id: "high-500", label: "種族値500以上のポケモン"},
+    { category: "basestats", id: "high-400", label: "種族値400以上のポケモン"},
+    { category: "basestats", id: "low-400", label: "種族値400以下のポケモン"},
+    { category: "basestats", id: "low-300", label: "種族値300以下のポケモン"},
+    { category: "basestats", id: "low-200", label: "種族値200以下のポケモン"},
 ];
 
 type PokemonEntry = {
@@ -36,7 +43,7 @@ type PokemonEntry = {
     genera: string;
 }
 
-export default function Quiz() {
+export default function Game() {
     const [selectedQuizRange, setSelectedQuizRange] = useState(quizRangeTypes[1]);
     const [quizPool, setQuizPool] = useState<PokemonEntry[]>([]);
     const [current, setCurrent] = useState<PokemonEntry | null>(null);
@@ -47,6 +54,15 @@ export default function Quiz() {
     const filteredlList: PokemonEntry[] = useMemo(() => {
         if (selectedQuizRange.category === "generation") {
             return pokemonData.filter((p) => p.generation === selectedQuizRange.id);
+        } else if (selectedQuizRange.category === "legendary") {
+            return pokemonData.filter((p) => p.is_legendary);
+        } else if (selectedQuizRange.category === "basestats") {
+            const config = selectedQuizRange.id.split("-");
+            if (config[0] === "high") {
+                return pokemonData.filter((p) => p.base_stats.hp + p.base_stats.attack + p.base_stats.defense + p.base_stats.special_attack + p.base_stats.special_defense + p.base_stats.speed >= parseInt(config[1]));
+            } else {
+                return pokemonData.filter((p) => p.base_stats.hp + p.base_stats.attack + p.base_stats.defense + p.base_stats.special_attack + p.base_stats.special_defense + p.base_stats.speed <= parseInt(config[1]));
+            };
         } else {
             return pokemonData;
         }
