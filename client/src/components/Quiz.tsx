@@ -43,7 +43,7 @@ type PokemonEntry = {
     genera: string;
 }
 
-export default function Game() {
+export default function Quiz() {
     const [selectedQuizRange, setSelectedQuizRange] = useState(quizRangeTypes[1]);
     const [quizPool, setQuizPool] = useState<PokemonEntry[]>([]);
     const [current, setCurrent] = useState<PokemonEntry | null>(null);
