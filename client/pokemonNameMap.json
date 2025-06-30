@@ -25034,5 +25034,3121 @@
     "is_mythical": false,
     "color": "green",
     "genera": "キングポケモン"
+  },
+  {
+    "id": 899,
+    "en": "wyrdeer",
+    "ja": "アヤシシ",
+    "types": [
+      "normal",
+      "psychic"
+    ],
+    "generation": "generation-viii",
+    "height": 18,
+    "weight": 951,
+    "base_stats": {
+      "hp": 103,
+      "attack": 105,
+      "defense": 72,
+      "special_attack": 105,
+      "special_defense": 75,
+      "speed": 65
+    },
+    "abilities": [
+      "いかく",
+      "おみとおし",
+      "そうしょく"
+    ],
+    "is_legendary": false,
+    "is_mythical": false,
+    "color": "gray",
+    "genera": "おおツノポケモン"
+  },
+  {
+    "id": 900,
+    "en": "kleavor",
+    "ja": "バサギリ",
+    "types": [
+      "bug",
+      "rock"
+    ],
+    "generation": "generation-viii",
+    "height": 18,
+    "weight": 890,
+    "base_stats": {
+      "hp": 70,
+      "attack": 135,
+      "defense": 95,
+      "special_attack": 45,
+      "special_defense": 70,
+      "speed": 85
+    },
+    "abilities": [
+      "むしのしらせ",
+      "ちからずく",
+      "きれあじ"
+    ],
+    "is_legendary": false,
+    "is_mythical": false,
+    "color": "brown",
+    "genera": "まさかりポケモン"
+  },
+  {
+    "id": 901,
+    "en": "ursaluna",
+    "ja": "ガチグマ",
+    "types": [
+      "ground",
+      "normal"
+    ],
+    "generation": "generation-viii",
+    "height": 24,
+    "weight": 2900,
+    "base_stats": {
+      "hp": 130,
+      "attack": 140,
+      "defense": 105,
+      "special_attack": 45,
+      "special_defense": 80,
+      "speed": 50
+    },
+    "abilities": [
+      "こんじょう",
+      "ぼうだん",
+      "きんちょうかん"
+    ],
+    "is_legendary": false,
+    "is_mythical": false,
+    "color": "brown",
+    "genera": "でいたんポケモン"
+  },
+  {
+    "id": 902,
+    "en": "basculegion-male",
+    "ja": "イダイトウ",
+    "types": [
+      "water",
+      "ghost"
+    ],
+    "generation": "generation-viii",
+    "height": 30,
+    "weight": 1100,
+    "base_stats": {
+      "hp": 120,
+      "attack": 112,
+      "defense": 65,
+      "special_attack": 80,
+      "special_defense": 75,
+      "speed": 78
+    },
+    "abilities": [
+      "すいすい",
+      "てきおうりょく",
+      "かたやぶり"
+    ],
+    "is_legendary": false,
+    "is_mythical": false,
+    "color": "green",
+    "genera": "おおうおポケモン"
+  },
+  {
+    "id": 903,
+    "en": "sneasler",
+    "ja": "オオニューラ",
+    "types": [
+      "fighting",
+      "poison"
+    ],
+    "generation": "generation-viii",
+    "height": 13,
+    "weight": 430,
+    "base_stats": {
+      "hp": 80,
+      "attack": 130,
+      "defense": 60,
+      "special_attack": 40,
+      "special_defense": 80,
+      "speed": 120
+    },
+    "abilities": [
+      "プレッシャー",
+      "かるわざ",
+      "どくしゅ"
+    ],
+    "is_legendary": false,
+    "is_mythical": false,
+    "color": "gray",
+    "genera": "クライミングポケモン"
+  },
+  {
+    "id": 904,
+    "en": "overqwil",
+    "ja": "ハリーマン",
+    "types": [
+      "dark",
+      "poison"
+    ],
+    "generation": "generation-viii",
+    "height": 25,
+    "weight": 605,
+    "base_stats": {
+      "hp": 85,
+      "attack": 115,
+      "defense": 95,
+      "special_attack": 65,
+      "special_defense": 65,
+      "speed": 85
+    },
+    "abilities": [
+      "どくのトゲ",
+      "すいすい",
+      "いかく"
+    ],
+    "is_legendary": false,
+    "is_mythical": false,
+    "color": "black",
+    "genera": "けんざんポケモン"
+  },
+  {
+    "id": 905,
+    "en": "enamorus-incarnate",
+    "ja": "ラブトロス",
+    "types": [
+      "fairy",
+      "flying"
+    ],
+    "generation": "generation-viii",
+    "height": 16,
+    "weight": 480,
+    "base_stats": {
+      "hp": 74,
+      "attack": 115,
+      "defense": 70,
+      "special_attack": 135,
+      "special_defense": 80,
+      "speed": 106
+    },
+    "abilities": [
+      "メロメロボディ",
+      "あまのじゃく"
+    ],
+    "is_legendary": true,
+    "is_mythical": false,
+    "color": "pink",
+    "genera": "あいぞうポケモン"
+  },
+  {
+    "id": 906,
+    "en": "sprigatito",
+    "ja": "ニャオハ",
+    "types": [
+      "grass"
+    ],
+    "generation": "generation-ix",
+    "height": 4,
+    "weight": 41,
+    "base_stats": {
+      "hp": 40,
+      "attack": 61,
+      "defense": 54,
+      "special_attack": 45,
+      "special_defense": 45,
+      "speed": 65
+    },
+    "abilities": [
+      "しんりょく",
+      "へんげんじざい"
+    ],
+    "is_legendary": false,
+    "is_mythical": false,
+    "color": "green",
+    "genera": ""
+  },
+  {
+    "id": 907,
+    "en": "floragato",
+    "ja": "ニャローテ",
+    "types": [
+      "grass"
+    ],
+    "generation": "generation-ix",
+    "height": 9,
+    "weight": 122,
+    "base_stats": {
+      "hp": 61,
+      "attack": 80,
+      "defense": 63,
+      "special_attack": 60,
+      "special_defense": 63,
+      "speed": 83
+    },
+    "abilities": [
+      "しんりょく",
+      "へんげんじざい"
+    ],
+    "is_legendary": false,
+    "is_mythical": false,
+    "color": "green",
+    "genera": ""
+  },
+  {
+    "id": 908,
+    "en": "meowscarada",
+    "ja": "マスカーニャ",
+    "types": [
+      "grass",
+      "dark"
+    ],
+    "generation": "generation-ix",
+    "height": 15,
+    "weight": 312,
+    "base_stats": {
+      "hp": 76,
+      "attack": 110,
+      "defense": 70,
+      "special_attack": 81,
+      "special_defense": 70,
+      "speed": 123
+    },
+    "abilities": [
+      "しんりょく",
+      "へんげんじざい"
+    ],
+    "is_legendary": false,
+    "is_mythical": false,
+    "color": "green",
+    "genera": ""
+  },
+  {
+    "id": 909,
+    "en": "fuecoco",
+    "ja": "ホゲータ",
+    "types": [
+      "fire"
+    ],
+    "generation": "generation-ix",
+    "height": 4,
+    "weight": 98,
+    "base_stats": {
+      "hp": 67,
+      "attack": 45,
+      "defense": 59,
+      "special_attack": 63,
+      "special_defense": 40,
+      "speed": 36
+    },
+    "abilities": [
+      "もうか",
+      "てんねん"
+    ],
+    "is_legendary": false,
+    "is_mythical": false,
+    "color": "red",
+    "genera": ""
+  },
+  {
+    "id": 910,
+    "en": "crocalor",
+    "ja": "アチゲータ",
+    "types": [
+      "fire"
+    ],
+    "generation": "generation-ix",
+    "height": 10,
+    "weight": 307,
+    "base_stats": {
+      "hp": 81,
+      "attack": 55,
+      "defense": 78,
+      "special_attack": 90,
+      "special_defense": 58,
+      "speed": 49
+    },
+    "abilities": [
+      "もうか",
+      "てんねん"
+    ],
+    "is_legendary": false,
+    "is_mythical": false,
+    "color": "red",
+    "genera": ""
+  },
+  {
+    "id": 911,
+    "en": "skeledirge",
+    "ja": "ラウドボーン",
+    "types": [
+      "fire",
+      "ghost"
+    ],
+    "generation": "generation-ix",
+    "height": 16,
+    "weight": 3265,
+    "base_stats": {
+      "hp": 104,
+      "attack": 75,
+      "defense": 100,
+      "special_attack": 110,
+      "special_defense": 75,
+      "speed": 66
+    },
+    "abilities": [
+      "もうか",
+      "てんねん"
+    ],
+    "is_legendary": false,
+    "is_mythical": false,
+    "color": "red",
+    "genera": ""
+  },
+  {
+    "id": 912,
+    "en": "quaxly",
+    "ja": "クワッス",
+    "types": [
+      "water"
+    ],
+    "generation": "generation-ix",
+    "height": 5,
+    "weight": 61,
+    "base_stats": {
+      "hp": 55,
+      "attack": 65,
+      "defense": 45,
+      "special_attack": 50,
+      "special_defense": 45,
+      "speed": 50
+    },
+    "abilities": [
+      "げきりゅう",
+      "じしんかじょう"
+    ],
+    "is_legendary": false,
+    "is_mythical": false,
+    "color": "white",
+    "genera": ""
+  },
+  {
+    "id": 913,
+    "en": "quaxwell",
+    "ja": "ウェルカモ",
+    "types": [
+      "water"
+    ],
+    "generation": "generation-ix",
+    "height": 12,
+    "weight": 215,
+    "base_stats": {
+      "hp": 70,
+      "attack": 85,
+      "defense": 65,
+      "special_attack": 65,
+      "special_defense": 60,
+      "speed": 65
+    },
+    "abilities": [
+      "げきりゅう",
+      "じしんかじょう"
+    ],
+    "is_legendary": false,
+    "is_mythical": false,
+    "color": "blue",
+    "genera": ""
+  },
+  {
+    "id": 914,
+    "en": "quaquaval",
+    "ja": "ウェーニバル",
+    "types": [
+      "water",
+      "fighting"
+    ],
+    "generation": "generation-ix",
+    "height": 18,
+    "weight": 619,
+    "base_stats": {
+      "hp": 85,
+      "attack": 120,
+      "defense": 80,
+      "special_attack": 85,
+      "special_defense": 75,
+      "speed": 85
+    },
+    "abilities": [
+      "げきりゅう",
+      "じしんかじょう"
+    ],
+    "is_legendary": false,
+    "is_mythical": false,
+    "color": "blue",
+    "genera": ""
+  },
+  {
+    "id": 915,
+    "en": "lechonk",
+    "ja": "グルトン",
+    "types": [
+      "normal"
+    ],
+    "generation": "generation-ix",
+    "height": 5,
+    "weight": 102,
+    "base_stats": {
+      "hp": 54,
+      "attack": 45,
+      "defense": 40,
+      "special_attack": 35,
+      "special_defense": 45,
+      "speed": 35
+    },
+    "abilities": [
+      "アロマベール",
+      "くいしんぼう",
+      "あついしぼう"
+    ],
+    "is_legendary": false,
+    "is_mythical": false,
+    "color": "gray",
+    "genera": ""
+  },
+  {
+    "id": 916,
+    "en": "oinkologne-male",
+    "ja": "パフュートン",
+    "types": [
+      "normal"
+    ],
+    "generation": "generation-ix",
+    "height": 10,
+    "weight": 1200,
+    "base_stats": {
+      "hp": 110,
+      "attack": 100,
+      "defense": 75,
+      "special_attack": 59,
+      "special_defense": 80,
+      "speed": 65
+    },
+    "abilities": [
+      "とれないにおい",
+      "くいしんぼう",
+      "あついしぼう"
+    ],
+    "is_legendary": false,
+    "is_mythical": false,
+    "color": "gray",
+    "genera": ""
+  },
+  {
+    "id": 917,
+    "en": "tarountula",
+    "ja": "タマンチュラ",
+    "types": [
+      "bug"
+    ],
+    "generation": "generation-ix",
+    "height": 3,
+    "weight": 40,
+    "base_stats": {
+      "hp": 35,
+      "attack": 41,
+      "defense": 45,
+      "special_attack": 29,
+      "special_defense": 40,
+      "speed": 20
+    },
+    "abilities": [
+      "ふみん",
+      "はりこみ"
+    ],
+    "is_legendary": false,
+    "is_mythical": false,
+    "color": "white",
+    "genera": ""
+  },
+  {
+    "id": 918,
+    "en": "spidops",
+    "ja": "ワナイダー",
+    "types": [
+      "bug"
+    ],
+    "generation": "generation-ix",
+    "height": 10,
+    "weight": 165,
+    "base_stats": {
+      "hp": 60,
+      "attack": 79,
+      "defense": 92,
+      "special_attack": 52,
+      "special_defense": 86,
+      "speed": 35
+    },
+    "abilities": [
+      "ふみん",
+      "はりこみ"
+    ],
+    "is_legendary": false,
+    "is_mythical": false,
+    "color": "green",
+    "genera": ""
+  },
+  {
+    "id": 919,
+    "en": "nymble",
+    "ja": "マメバッタ",
+    "types": [
+      "bug"
+    ],
+    "generation": "generation-ix",
+    "height": 2,
+    "weight": 10,
+    "base_stats": {
+      "hp": 33,
+      "attack": 46,
+      "defense": 40,
+      "special_attack": 21,
+      "special_defense": 25,
+      "speed": 45
+    },
+    "abilities": [
+      "むしのしらせ",
+      "いろめがね"
+    ],
+    "is_legendary": false,
+    "is_mythical": false,
+    "color": "gray",
+    "genera": ""
+  },
+  {
+    "id": 920,
+    "en": "lokix",
+    "ja": "エクスレッグ",
+    "types": [
+      "bug",
+      "dark"
+    ],
+    "generation": "generation-ix",
+    "height": 10,
+    "weight": 175,
+    "base_stats": {
+      "hp": 71,
+      "attack": 102,
+      "defense": 78,
+      "special_attack": 52,
+      "special_defense": 55,
+      "speed": 92
+    },
+    "abilities": [
+      "むしのしらせ",
+      "いろめがね"
+    ],
+    "is_legendary": false,
+    "is_mythical": false,
+    "color": "gray",
+    "genera": ""
+  },
+  {
+    "id": 921,
+    "en": "pawmi",
+    "ja": "パモ",
+    "types": [
+      "electric"
+    ],
+    "generation": "generation-ix",
+    "height": 3,
+    "weight": 25,
+    "base_stats": {
+      "hp": 45,
+      "attack": 50,
+      "defense": 20,
+      "special_attack": 40,
+      "special_defense": 25,
+      "speed": 60
+    },
+    "abilities": [
+      "せいでんき",
+      "しぜんかいふく",
+      "てつのこぶし"
+    ],
+    "is_legendary": false,
+    "is_mythical": false,
+    "color": "yellow",
+    "genera": ""
+  },
+  {
+    "id": 922,
+    "en": "pawmo",
+    "ja": "パモット",
+    "types": [
+      "electric",
+      "fighting"
+    ],
+    "generation": "generation-ix",
+    "height": 4,
+    "weight": 65,
+    "base_stats": {
+      "hp": 60,
+      "attack": 75,
+      "defense": 40,
+      "special_attack": 50,
+      "special_defense": 40,
+      "speed": 85
+    },
+    "abilities": [
+      "ちくでん",
+      "しぜんかいふく",
+      "てつのこぶし"
+    ],
+    "is_legendary": false,
+    "is_mythical": false,
+    "color": "yellow",
+    "genera": ""
+  },
+  {
+    "id": 923,
+    "en": "pawmot",
+    "ja": "パーモット",
+    "types": [
+      "electric",
+      "fighting"
+    ],
+    "generation": "generation-ix",
+    "height": 9,
+    "weight": 410,
+    "base_stats": {
+      "hp": 70,
+      "attack": 115,
+      "defense": 70,
+      "special_attack": 70,
+      "special_defense": 60,
+      "speed": 105
+    },
+    "abilities": [
+      "ちくでん",
+      "しぜんかいふく",
+      "てつのこぶし"
+    ],
+    "is_legendary": false,
+    "is_mythical": false,
+    "color": "yellow",
+    "genera": ""
+  },
+  {
+    "id": 924,
+    "en": "tandemaus",
+    "ja": "ワッカネズミ",
+    "types": [
+      "normal"
+    ],
+    "generation": "generation-ix",
+    "height": 3,
+    "weight": 18,
+    "base_stats": {
+      "hp": 50,
+      "attack": 50,
+      "defense": 45,
+      "special_attack": 40,
+      "special_defense": 45,
+      "speed": 75
+    },
+    "abilities": [
+      "にげあし",
+      "ものひろい",
+      "マイペース"
+    ],
+    "is_legendary": false,
+    "is_mythical": false,
+    "color": "white",
+    "genera": ""
+  },
+  {
+    "id": 925,
+    "en": "maushold-family-of-four",
+    "ja": "イッカネズミ",
+    "types": [
+      "normal"
+    ],
+    "generation": "generation-ix",
+    "height": 3,
+    "weight": 23,
+    "base_stats": {
+      "hp": 74,
+      "attack": 75,
+      "defense": 70,
+      "special_attack": 65,
+      "special_defense": 75,
+      "speed": 111
+    },
+    "abilities": [
+      "フレンドガード",
+      "ほおぶくろ",
+      "テクニシャン"
+    ],
+    "is_legendary": false,
+    "is_mythical": false,
+    "color": "white",
+    "genera": ""
+  },
+  {
+    "id": 926,
+    "en": "fidough",
+    "ja": "パピモッチ",
+    "types": [
+      "fairy"
+    ],
+    "generation": "generation-ix",
+    "height": 3,
+    "weight": 109,
+    "base_stats": {
+      "hp": 37,
+      "attack": 55,
+      "defense": 70,
+      "special_attack": 30,
+      "special_defense": 55,
+      "speed": 65
+    },
+    "abilities": [
+      "マイペース",
+      "ぶきよう"
+    ],
+    "is_legendary": false,
+    "is_mythical": false,
+    "color": "yellow",
+    "genera": ""
+  },
+  {
+    "id": 927,
+    "en": "dachsbun",
+    "ja": "バウッツェル",
+    "types": [
+      "fairy"
+    ],
+    "generation": "generation-ix",
+    "height": 5,
+    "weight": 149,
+    "base_stats": {
+      "hp": 57,
+      "attack": 80,
+      "defense": 115,
+      "special_attack": 50,
+      "special_defense": 80,
+      "speed": 95
+    },
+    "abilities": [
+      "こんがりボディ",
+      "アロマベール"
+    ],
+    "is_legendary": false,
+    "is_mythical": false,
+    "color": "brown",
+    "genera": ""
+  },
+  {
+    "id": 928,
+    "en": "smoliv",
+    "ja": "ミニーブ",
+    "types": [
+      "grass",
+      "normal"
+    ],
+    "generation": "generation-ix",
+    "height": 3,
+    "weight": 65,
+    "base_stats": {
+      "hp": 41,
+      "attack": 35,
+      "defense": 45,
+      "special_attack": 58,
+      "special_defense": 51,
+      "speed": 30
+    },
+    "abilities": [
+      "はやおき",
+      "しゅうかく"
+    ],
+    "is_legendary": false,
+    "is_mythical": false,
+    "color": "green",
+    "genera": ""
+  },
+  {
+    "id": 929,
+    "en": "dolliv",
+    "ja": "オリーニョ",
+    "types": [
+      "grass",
+      "normal"
+    ],
+    "generation": "generation-ix",
+    "height": 6,
+    "weight": 119,
+    "base_stats": {
+      "hp": 52,
+      "attack": 53,
+      "defense": 60,
+      "special_attack": 78,
+      "special_defense": 78,
+      "speed": 33
+    },
+    "abilities": [
+      "はやおき",
+      "しゅうかく"
+    ],
+    "is_legendary": false,
+    "is_mythical": false,
+    "color": "green",
+    "genera": ""
+  },
+  {
+    "id": 930,
+    "en": "arboliva",
+    "ja": "オリーヴァ",
+    "types": [
+      "grass",
+      "normal"
+    ],
+    "generation": "generation-ix",
+    "height": 14,
+    "weight": 482,
+    "base_stats": {
+      "hp": 78,
+      "attack": 69,
+      "defense": 90,
+      "special_attack": 125,
+      "special_defense": 109,
+      "speed": 39
+    },
+    "abilities": [
+      "こぼれダネ",
+      "しゅうかく"
+    ],
+    "is_legendary": false,
+    "is_mythical": false,
+    "color": "green",
+    "genera": ""
+  },
+  {
+    "id": 931,
+    "en": "squawkabilly-green-plumage",
+    "ja": "イキリンコ",
+    "types": [
+      "normal",
+      "flying"
+    ],
+    "generation": "generation-ix",
+    "height": 6,
+    "weight": 24,
+    "base_stats": {
+      "hp": 82,
+      "attack": 96,
+      "defense": 51,
+      "special_attack": 45,
+      "special_defense": 51,
+      "speed": 92
+    },
+    "abilities": [
+      "いかく",
+      "はりきり",
+      "こんじょう"
+    ],
+    "is_legendary": false,
+    "is_mythical": false,
+    "color": "green",
+    "genera": ""
+  },
+  {
+    "id": 932,
+    "en": "nacli",
+    "ja": "コジオ",
+    "types": [
+      "rock"
+    ],
+    "generation": "generation-ix",
+    "height": 4,
+    "weight": 160,
+    "base_stats": {
+      "hp": 55,
+      "attack": 55,
+      "defense": 75,
+      "special_attack": 35,
+      "special_defense": 35,
+      "speed": 25
+    },
+    "abilities": [
+      "きよめのしお",
+      "がんじょう",
+      "クリアボディ"
+    ],
+    "is_legendary": false,
+    "is_mythical": false,
+    "color": "brown",
+    "genera": ""
+  },
+  {
+    "id": 933,
+    "en": "naclstack",
+    "ja": "ジオヅム",
+    "types": [
+      "rock"
+    ],
+    "generation": "generation-ix",
+    "height": 6,
+    "weight": 1050,
+    "base_stats": {
+      "hp": 60,
+      "attack": 60,
+      "defense": 100,
+      "special_attack": 35,
+      "special_defense": 65,
+      "speed": 35
+    },
+    "abilities": [
+      "きよめのしお",
+      "がんじょう",
+      "クリアボディ"
+    ],
+    "is_legendary": false,
+    "is_mythical": false,
+    "color": "brown",
+    "genera": ""
+  },
+  {
+    "id": 934,
+    "en": "garganacl",
+    "ja": "キョジオーン",
+    "types": [
+      "rock"
+    ],
+    "generation": "generation-ix",
+    "height": 23,
+    "weight": 2400,
+    "base_stats": {
+      "hp": 100,
+      "attack": 100,
+      "defense": 130,
+      "special_attack": 45,
+      "special_defense": 90,
+      "speed": 35
+    },
+    "abilities": [
+      "きよめのしお",
+      "がんじょう",
+      "クリアボディ"
+    ],
+    "is_legendary": false,
+    "is_mythical": false,
+    "color": "brown",
+    "genera": ""
+  },
+  {
+    "id": 935,
+    "en": "charcadet",
+    "ja": "カルボウ",
+    "types": [
+      "fire"
+    ],
+    "generation": "generation-ix",
+    "height": 6,
+    "weight": 105,
+    "base_stats": {
+      "hp": 40,
+      "attack": 50,
+      "defense": 40,
+      "special_attack": 50,
+      "special_defense": 40,
+      "speed": 35
+    },
+    "abilities": [
+      "もらいび",
+      "ほのおのからだ"
+    ],
+    "is_legendary": false,
+    "is_mythical": false,
+    "color": "red",
+    "genera": ""
+  },
+  {
+    "id": 936,
+    "en": "armarouge",
+    "ja": "グレンアルマ",
+    "types": [
+      "fire",
+      "psychic"
+    ],
+    "generation": "generation-ix",
+    "height": 15,
+    "weight": 850,
+    "base_stats": {
+      "hp": 85,
+      "attack": 60,
+      "defense": 100,
+      "special_attack": 125,
+      "special_defense": 80,
+      "speed": 75
+    },
+    "abilities": [
+      "もらいび",
+      "くだけるよろい"
+    ],
+    "is_legendary": false,
+    "is_mythical": false,
+    "color": "red",
+    "genera": ""
+  },
+  {
+    "id": 937,
+    "en": "ceruledge",
+    "ja": "ソウブレイズ",
+    "types": [
+      "fire",
+      "ghost"
+    ],
+    "generation": "generation-ix",
+    "height": 16,
+    "weight": 620,
+    "base_stats": {
+      "hp": 75,
+      "attack": 125,
+      "defense": 80,
+      "special_attack": 60,
+      "special_defense": 100,
+      "speed": 85
+    },
+    "abilities": [
+      "もらいび",
+      "くだけるよろい"
+    ],
+    "is_legendary": false,
+    "is_mythical": false,
+    "color": "blue",
+    "genera": ""
+  },
+  {
+    "id": 938,
+    "en": "tadbulb",
+    "ja": "ズピカ",
+    "types": [
+      "electric"
+    ],
+    "generation": "generation-ix",
+    "height": 3,
+    "weight": 4,
+    "base_stats": {
+      "hp": 61,
+      "attack": 31,
+      "defense": 41,
+      "special_attack": 59,
+      "special_defense": 35,
+      "speed": 45
+    },
+    "abilities": [
+      "マイペース",
+      "せいでんき",
+      "しめりけ"
+    ],
+    "is_legendary": false,
+    "is_mythical": false,
+    "color": "yellow",
+    "genera": ""
+  },
+  {
+    "id": 939,
+    "en": "bellibolt",
+    "ja": "ハラバリー",
+    "types": [
+      "electric"
+    ],
+    "generation": "generation-ix",
+    "height": 12,
+    "weight": 1130,
+    "base_stats": {
+      "hp": 109,
+      "attack": 64,
+      "defense": 91,
+      "special_attack": 103,
+      "special_defense": 83,
+      "speed": 45
+    },
+    "abilities": [
+      "でんきにかえる",
+      "せいでんき",
+      "しめりけ"
+    ],
+    "is_legendary": false,
+    "is_mythical": false,
+    "color": "green",
+    "genera": ""
+  },
+  {
+    "id": 940,
+    "en": "wattrel",
+    "ja": "カイデン",
+    "types": [
+      "electric",
+      "flying"
+    ],
+    "generation": "generation-ix",
+    "height": 4,
+    "weight": 36,
+    "base_stats": {
+      "hp": 40,
+      "attack": 40,
+      "defense": 35,
+      "special_attack": 55,
+      "special_defense": 40,
+      "speed": 70
+    },
+    "abilities": [
+      "ふうりょくでんき",
+      "ちくでん",
+      "かちき"
+    ],
+    "is_legendary": false,
+    "is_mythical": false,
+    "color": "black",
+    "genera": ""
+  },
+  {
+    "id": 941,
+    "en": "kilowattrel",
+    "ja": "タイカイデン",
+    "types": [
+      "electric",
+      "flying"
+    ],
+    "generation": "generation-ix",
+    "height": 14,
+    "weight": 386,
+    "base_stats": {
+      "hp": 70,
+      "attack": 70,
+      "defense": 60,
+      "special_attack": 105,
+      "special_defense": 60,
+      "speed": 125
+    },
+    "abilities": [
+      "ふうりょくでんき",
+      "ちくでん",
+      "かちき"
+    ],
+    "is_legendary": false,
+    "is_mythical": false,
+    "color": "yellow",
+    "genera": ""
+  },
+  {
+    "id": 942,
+    "en": "maschiff",
+    "ja": "オラチフ",
+    "types": [
+      "dark"
+    ],
+    "generation": "generation-ix",
+    "height": 5,
+    "weight": 160,
+    "base_stats": {
+      "hp": 60,
+      "attack": 78,
+      "defense": 60,
+      "special_attack": 40,
+      "special_defense": 51,
+      "speed": 51
+    },
+    "abilities": [
+      "いかく",
+      "にげあし",
+      "はりこみ"
+    ],
+    "is_legendary": false,
+    "is_mythical": false,
+    "color": "brown",
+    "genera": ""
+  },
+  {
+    "id": 943,
+    "en": "mabosstiff",
+    "ja": "マフィティフ",
+    "types": [
+      "dark"
+    ],
+    "generation": "generation-ix",
+    "height": 11,
+    "weight": 610,
+    "base_stats": {
+      "hp": 80,
+      "attack": 120,
+      "defense": 90,
+      "special_attack": 60,
+      "special_defense": 70,
+      "speed": 85
+    },
+    "abilities": [
+      "いかく",
+      "ばんけん",
+      "はりこみ"
+    ],
+    "is_legendary": false,
+    "is_mythical": false,
+    "color": "gray",
+    "genera": ""
+  },
+  {
+    "id": 944,
+    "en": "shroodle",
+    "ja": "シルシュルー",
+    "types": [
+      "poison",
+      "normal"
+    ],
+    "generation": "generation-ix",
+    "height": 2,
+    "weight": 7,
+    "base_stats": {
+      "hp": 40,
+      "attack": 65,
+      "defense": 35,
+      "special_attack": 40,
+      "special_defense": 35,
+      "speed": 75
+    },
+    "abilities": [
+      "かるわざ",
+      "わるいてぐせ",
+      "いたずらごころ"
+    ],
+    "is_legendary": false,
+    "is_mythical": false,
+    "color": "gray",
+    "genera": ""
+  },
+  {
+    "id": 945,
+    "en": "grafaiai",
+    "ja": "タギングル",
+    "types": [
+      "poison",
+      "normal"
+    ],
+    "generation": "generation-ix",
+    "height": 7,
+    "weight": 272,
+    "base_stats": {
+      "hp": 63,
+      "attack": 95,
+      "defense": 65,
+      "special_attack": 80,
+      "special_defense": 72,
+      "speed": 110
+    },
+    "abilities": [
+      "かるわざ",
+      "どくしゅ",
+      "いたずらごころ"
+    ],
+    "is_legendary": false,
+    "is_mythical": false,
+    "color": "gray",
+    "genera": ""
+  },
+  {
+    "id": 946,
+    "en": "bramblin",
+    "ja": "アノクサ",
+    "types": [
+      "grass",
+      "ghost"
+    ],
+    "generation": "generation-ix",
+    "height": 6,
+    "weight": 6,
+    "base_stats": {
+      "hp": 40,
+      "attack": 65,
+      "defense": 30,
+      "special_attack": 45,
+      "special_defense": 35,
+      "speed": 60
+    },
+    "abilities": [
+      "かぜのり",
+      "すりぬけ"
+    ],
+    "is_legendary": false,
+    "is_mythical": false,
+    "color": "brown",
+    "genera": ""
+  },
+  {
+    "id": 947,
+    "en": "brambleghast",
+    "ja": "アノホラグサ",
+    "types": [
+      "grass",
+      "ghost"
+    ],
+    "generation": "generation-ix",
+    "height": 12,
+    "weight": 60,
+    "base_stats": {
+      "hp": 55,
+      "attack": 115,
+      "defense": 70,
+      "special_attack": 80,
+      "special_defense": 70,
+      "speed": 90
+    },
+    "abilities": [
+      "かぜのり",
+      "すりぬけ"
+    ],
+    "is_legendary": false,
+    "is_mythical": false,
+    "color": "brown",
+    "genera": ""
+  },
+  {
+    "id": 948,
+    "en": "toedscool",
+    "ja": "ノノクラゲ",
+    "types": [
+      "ground",
+      "grass"
+    ],
+    "generation": "generation-ix",
+    "height": 9,
+    "weight": 330,
+    "base_stats": {
+      "hp": 40,
+      "attack": 40,
+      "defense": 35,
+      "special_attack": 50,
+      "special_defense": 100,
+      "speed": 70
+    },
+    "abilities": [
+      "きんしのちから",
+      "きんしのちから"
+    ],
+    "is_legendary": false,
+    "is_mythical": false,
+    "color": "yellow",
+    "genera": ""
+  },
+  {
+    "id": 949,
+    "en": "toedscruel",
+    "ja": "リククラゲ",
+    "types": [
+      "ground",
+      "grass"
+    ],
+    "generation": "generation-ix",
+    "height": 19,
+    "weight": 580,
+    "base_stats": {
+      "hp": 80,
+      "attack": 70,
+      "defense": 65,
+      "special_attack": 80,
+      "special_defense": 120,
+      "speed": 100
+    },
+    "abilities": [
+      "きんしのちから",
+      "きんしのちから"
+    ],
+    "is_legendary": false,
+    "is_mythical": false,
+    "color": "black",
+    "genera": ""
+  },
+  {
+    "id": 950,
+    "en": "klawf",
+    "ja": "ガケガニ",
+    "types": [
+      "rock"
+    ],
+    "generation": "generation-ix",
+    "height": 13,
+    "weight": 790,
+    "base_stats": {
+      "hp": 70,
+      "attack": 100,
+      "defense": 115,
+      "special_attack": 35,
+      "special_defense": 55,
+      "speed": 75
+    },
+    "abilities": [
+      "いかりのこうら",
+      "シェルアーマー",
+      "さいせいりょく"
+    ],
+    "is_legendary": false,
+    "is_mythical": false,
+    "color": "red",
+    "genera": ""
+  },
+  {
+    "id": 951,
+    "en": "capsakid",
+    "ja": "カプサイジ",
+    "types": [
+      "grass"
+    ],
+    "generation": "generation-ix",
+    "height": 3,
+    "weight": 30,
+    "base_stats": {
+      "hp": 50,
+      "attack": 62,
+      "defense": 40,
+      "special_attack": 62,
+      "special_defense": 40,
+      "speed": 50
+    },
+    "abilities": [
+      "ようりょくそ",
+      "ふみん",
+      "ぶきよう"
+    ],
+    "is_legendary": false,
+    "is_mythical": false,
+    "color": "green",
+    "genera": ""
+  },
+  {
+    "id": 952,
+    "en": "scovillain",
+    "ja": "スコヴィラン",
+    "types": [
+      "grass",
+      "fire"
+    ],
+    "generation": "generation-ix",
+    "height": 9,
+    "weight": 150,
+    "base_stats": {
+      "hp": 65,
+      "attack": 108,
+      "defense": 65,
+      "special_attack": 108,
+      "special_defense": 65,
+      "speed": 75
+    },
+    "abilities": [
+      "ようりょくそ",
+      "ふみん",
+      "ムラっけ"
+    ],
+    "is_legendary": false,
+    "is_mythical": false,
+    "color": "green",
+    "genera": ""
+  },
+  {
+    "id": 953,
+    "en": "rellor",
+    "ja": "シガロコ",
+    "types": [
+      "bug"
+    ],
+    "generation": "generation-ix",
+    "height": 2,
+    "weight": 10,
+    "base_stats": {
+      "hp": 41,
+      "attack": 50,
+      "defense": 60,
+      "special_attack": 31,
+      "special_defense": 58,
+      "speed": 30
+    },
+    "abilities": [
+      "ふくがん",
+      "だっぴ"
+    ],
+    "is_legendary": false,
+    "is_mythical": false,
+    "color": "brown",
+    "genera": ""
+  },
+  {
+    "id": 954,
+    "en": "rabsca",
+    "ja": "ベラカス",
+    "types": [
+      "bug",
+      "psychic"
+    ],
+    "generation": "generation-ix",
+    "height": 3,
+    "weight": 35,
+    "base_stats": {
+      "hp": 75,
+      "attack": 50,
+      "defense": 85,
+      "special_attack": 115,
+      "special_defense": 100,
+      "speed": 45
+    },
+    "abilities": [
+      "シンクロ",
+      "テレパシー"
+    ],
+    "is_legendary": false,
+    "is_mythical": false,
+    "color": "green",
+    "genera": ""
+  },
+  {
+    "id": 955,
+    "en": "flittle",
+    "ja": "ヒラヒナ",
+    "types": [
+      "psychic"
+    ],
+    "generation": "generation-ix",
+    "height": 2,
+    "weight": 15,
+    "base_stats": {
+      "hp": 30,
+      "attack": 35,
+      "defense": 30,
+      "special_attack": 55,
+      "special_defense": 30,
+      "speed": 75
+    },
+    "abilities": [
+      "きけんよち",
+      "おみとおし",
+      "かそく"
+    ],
+    "is_legendary": false,
+    "is_mythical": false,
+    "color": "yellow",
+    "genera": ""
+  },
+  {
+    "id": 956,
+    "en": "espathra",
+    "ja": "クエスパトラ",
+    "types": [
+      "psychic"
+    ],
+    "generation": "generation-ix",
+    "height": 19,
+    "weight": 900,
+    "base_stats": {
+      "hp": 95,
+      "attack": 60,
+      "defense": 60,
+      "special_attack": 101,
+      "special_defense": 60,
+      "speed": 105
+    },
+    "abilities": [
+      "びんじょう",
+      "おみとおし",
+      "かそく"
+    ],
+    "is_legendary": false,
+    "is_mythical": false,
+    "color": "yellow",
+    "genera": ""
+  },
+  {
+    "id": 957,
+    "en": "tinkatink",
+    "ja": "カヌチャン",
+    "types": [
+      "fairy",
+      "steel"
+    ],
+    "generation": "generation-ix",
+    "height": 4,
+    "weight": 89,
+    "base_stats": {
+      "hp": 50,
+      "attack": 45,
+      "defense": 45,
+      "special_attack": 35,
+      "special_defense": 64,
+      "speed": 58
+    },
+    "abilities": [
+      "かたやぶり",
+      "マイペース",
+      "わるいてぐせ"
+    ],
+    "is_legendary": false,
+    "is_mythical": false,
+    "color": "pink",
+    "genera": ""
+  },
+  {
+    "id": 958,
+    "en": "tinkatuff",
+    "ja": "ナカヌチャン",
+    "types": [
+      "fairy",
+      "steel"
+    ],
+    "generation": "generation-ix",
+    "height": 7,
+    "weight": 591,
+    "base_stats": {
+      "hp": 65,
+      "attack": 55,
+      "defense": 55,
+      "special_attack": 45,
+      "special_defense": 82,
+      "speed": 78
+    },
+    "abilities": [
+      "かたやぶり",
+      "マイペース",
+      "わるいてぐせ"
+    ],
+    "is_legendary": false,
+    "is_mythical": false,
+    "color": "pink",
+    "genera": ""
+  },
+  {
+    "id": 959,
+    "en": "tinkaton",
+    "ja": "デカヌチャン",
+    "types": [
+      "fairy",
+      "steel"
+    ],
+    "generation": "generation-ix",
+    "height": 7,
+    "weight": 1128,
+    "base_stats": {
+      "hp": 85,
+      "attack": 75,
+      "defense": 77,
+      "special_attack": 70,
+      "special_defense": 105,
+      "speed": 94
+    },
+    "abilities": [
+      "かたやぶり",
+      "マイペース",
+      "わるいてぐせ"
+    ],
+    "is_legendary": false,
+    "is_mythical": false,
+    "color": "pink",
+    "genera": ""
+  },
+  {
+    "id": 960,
+    "en": "wiglett",
+    "ja": "ウミディグダ",
+    "types": [
+      "water"
+    ],
+    "generation": "generation-ix",
+    "height": 12,
+    "weight": 18,
+    "base_stats": {
+      "hp": 10,
+      "attack": 55,
+      "defense": 25,
+      "special_attack": 35,
+      "special_defense": 25,
+      "speed": 95
+    },
+    "abilities": [
+      "ぬめぬめ",
+      "びびり",
+      "すながくれ"
+    ],
+    "is_legendary": false,
+    "is_mythical": false,
+    "color": "white",
+    "genera": ""
+  },
+  {
+    "id": 961,
+    "en": "wugtrio",
+    "ja": "ウミトリオ",
+    "types": [
+      "water"
+    ],
+    "generation": "generation-ix",
+    "height": 12,
+    "weight": 54,
+    "base_stats": {
+      "hp": 35,
+      "attack": 100,
+      "defense": 50,
+      "special_attack": 50,
+      "special_defense": 70,
+      "speed": 120
+    },
+    "abilities": [
+      "ぬめぬめ",
+      "びびり",
+      "すながくれ"
+    ],
+    "is_legendary": false,
+    "is_mythical": false,
+    "color": "red",
+    "genera": ""
+  },
+  {
+    "id": 962,
+    "en": "bombirdier",
+    "ja": "オトシドリ",
+    "types": [
+      "flying",
+      "dark"
+    ],
+    "generation": "generation-ix",
+    "height": 15,
+    "weight": 429,
+    "base_stats": {
+      "hp": 70,
+      "attack": 103,
+      "defense": 85,
+      "special_attack": 60,
+      "special_defense": 85,
+      "speed": 82
+    },
+    "abilities": [
+      "はとむね",
+      "するどいめ",
+      "いわはこび"
+    ],
+    "is_legendary": false,
+    "is_mythical": false,
+    "color": "white",
+    "genera": ""
+  },
+  {
+    "id": 963,
+    "en": "finizen",
+    "ja": "ナミイルカ",
+    "types": [
+      "water"
+    ],
+    "generation": "generation-ix",
+    "height": 13,
+    "weight": 602,
+    "base_stats": {
+      "hp": 70,
+      "attack": 45,
+      "defense": 40,
+      "special_attack": 45,
+      "special_defense": 40,
+      "speed": 75
+    },
+    "abilities": [
+      "みずのベール",
+      "みずのベール"
+    ],
+    "is_legendary": false,
+    "is_mythical": false,
+    "color": "blue",
+    "genera": ""
+  },
+  {
+    "id": 964,
+    "en": "palafin-zero",
+    "ja": "イルカマン",
+    "types": [
+      "water"
+    ],
+    "generation": "generation-ix",
+    "height": 13,
+    "weight": 602,
+    "base_stats": {
+      "hp": 100,
+      "attack": 70,
+      "defense": 72,
+      "special_attack": 53,
+      "special_defense": 62,
+      "speed": 100
+    },
+    "abilities": [
+      "マイティチェンジ",
+      "マイティチェンジ"
+    ],
+    "is_legendary": false,
+    "is_mythical": false,
+    "color": "blue",
+    "genera": ""
+  },
+  {
+    "id": 965,
+    "en": "varoom",
+    "ja": "ブロロン",
+    "types": [
+      "steel",
+      "poison"
+    ],
+    "generation": "generation-ix",
+    "height": 10,
+    "weight": 350,
+    "base_stats": {
+      "hp": 45,
+      "attack": 70,
+      "defense": 63,
+      "special_attack": 30,
+      "special_defense": 45,
+      "speed": 47
+    },
+    "abilities": [
+      "ぼうじん",
+      "スロースタート"
+    ],
+    "is_legendary": false,
+    "is_mythical": false,
+    "color": "gray",
+    "genera": ""
+  },
+  {
+    "id": 966,
+    "en": "revavroom",
+    "ja": "ブロロローム",
+    "types": [
+      "steel",
+      "poison"
+    ],
+    "generation": "generation-ix",
+    "height": 18,
+    "weight": 1200,
+    "base_stats": {
+      "hp": 80,
+      "attack": 119,
+      "defense": 90,
+      "special_attack": 54,
+      "special_defense": 67,
+      "speed": 90
+    },
+    "abilities": [
+      "ぼうじん",
+      "フィルター"
+    ],
+    "is_legendary": false,
+    "is_mythical": false,
+    "color": "gray",
+    "genera": ""
+  },
+  {
+    "id": 967,
+    "en": "cyclizar",
+    "ja": "モトトカゲ",
+    "types": [
+      "dragon",
+      "normal"
+    ],
+    "generation": "generation-ix",
+    "height": 16,
+    "weight": 630,
+    "base_stats": {
+      "hp": 70,
+      "attack": 95,
+      "defense": 65,
+      "special_attack": 85,
+      "special_defense": 65,
+      "speed": 121
+    },
+    "abilities": [
+      "だっぴ",
+      "さいせいりょく"
+    ],
+    "is_legendary": false,
+    "is_mythical": false,
+    "color": "green",
+    "genera": ""
+  },
+  {
+    "id": 968,
+    "en": "orthworm",
+    "ja": "ミミズズ",
+    "types": [
+      "steel"
+    ],
+    "generation": "generation-ix",
+    "height": 25,
+    "weight": 3100,
+    "base_stats": {
+      "hp": 70,
+      "attack": 85,
+      "defense": 145,
+      "special_attack": 60,
+      "special_defense": 55,
+      "speed": 65
+    },
+    "abilities": [
+      "どしょく",
+      "すながくれ"
+    ],
+    "is_legendary": false,
+    "is_mythical": false,
+    "color": "pink",
+    "genera": ""
+  },
+  {
+    "id": 969,
+    "en": "glimmet",
+    "ja": "キラーメ",
+    "types": [
+      "rock",
+      "poison"
+    ],
+    "generation": "generation-ix",
+    "height": 7,
+    "weight": 80,
+    "base_stats": {
+      "hp": 48,
+      "attack": 35,
+      "defense": 42,
+      "special_attack": 105,
+      "special_defense": 60,
+      "speed": 60
+    },
+    "abilities": [
+      "どくげしょう",
+      "ふしょく"
+    ],
+    "is_legendary": false,
+    "is_mythical": false,
+    "color": "blue",
+    "genera": ""
+  },
+  {
+    "id": 970,
+    "en": "glimmora",
+    "ja": "キラフロル",
+    "types": [
+      "rock",
+      "poison"
+    ],
+    "generation": "generation-ix",
+    "height": 15,
+    "weight": 450,
+    "base_stats": {
+      "hp": 83,
+      "attack": 55,
+      "defense": 90,
+      "special_attack": 130,
+      "special_defense": 81,
+      "speed": 86
+    },
+    "abilities": [
+      "どくげしょう",
+      "ふしょく"
+    ],
+    "is_legendary": false,
+    "is_mythical": false,
+    "color": "blue",
+    "genera": ""
+  },
+  {
+    "id": 971,
+    "en": "greavard",
+    "ja": "ボチ",
+    "types": [
+      "ghost"
+    ],
+    "generation": "generation-ix",
+    "height": 6,
+    "weight": 350,
+    "base_stats": {
+      "hp": 50,
+      "attack": 61,
+      "defense": 60,
+      "special_attack": 30,
+      "special_defense": 55,
+      "speed": 34
+    },
+    "abilities": [
+      "ものひろい",
+      "もふもふ"
+    ],
+    "is_legendary": false,
+    "is_mythical": false,
+    "color": "white",
+    "genera": ""
+  },
+  {
+    "id": 972,
+    "en": "houndstone",
+    "ja": "ハカドッグ",
+    "types": [
+      "ghost"
+    ],
+    "generation": "generation-ix",
+    "height": 20,
+    "weight": 150,
+    "base_stats": {
+      "hp": 72,
+      "attack": 101,
+      "defense": 100,
+      "special_attack": 50,
+      "special_defense": 97,
+      "speed": 68
+    },
+    "abilities": [
+      "すなかき",
+      "もふもふ"
+    ],
+    "is_legendary": false,
+    "is_mythical": false,
+    "color": "white",
+    "genera": ""
+  },
+  {
+    "id": 973,
+    "en": "flamigo",
+    "ja": "カラミンゴ",
+    "types": [
+      "flying",
+      "fighting"
+    ],
+    "generation": "generation-ix",
+    "height": 16,
+    "weight": 370,
+    "base_stats": {
+      "hp": 82,
+      "attack": 115,
+      "defense": 74,
+      "special_attack": 75,
+      "special_defense": 64,
+      "speed": 90
+    },
+    "abilities": [
+      "きもったま",
+      "ちどりあし",
+      "きょうえん"
+    ],
+    "is_legendary": false,
+    "is_mythical": false,
+    "color": "pink",
+    "genera": ""
+  },
+  {
+    "id": 974,
+    "en": "cetoddle",
+    "ja": "アルクジラ",
+    "types": [
+      "ice"
+    ],
+    "generation": "generation-ix",
+    "height": 12,
+    "weight": 450,
+    "base_stats": {
+      "hp": 108,
+      "attack": 68,
+      "defense": 45,
+      "special_attack": 30,
+      "special_defense": 40,
+      "speed": 43
+    },
+    "abilities": [
+      "あついしぼう",
+      "ゆきがくれ",
+      "ちからずく"
+    ],
+    "is_legendary": false,
+    "is_mythical": false,
+    "color": "white",
+    "genera": ""
+  },
+  {
+    "id": 975,
+    "en": "cetitan",
+    "ja": "ハルクジラ",
+    "types": [
+      "ice"
+    ],
+    "generation": "generation-ix",
+    "height": 45,
+    "weight": 7000,
+    "base_stats": {
+      "hp": 170,
+      "attack": 113,
+      "defense": 65,
+      "special_attack": 45,
+      "special_defense": 55,
+      "speed": 73
+    },
+    "abilities": [
+      "あついしぼう",
+      "ゆきかき",
+      "ちからずく"
+    ],
+    "is_legendary": false,
+    "is_mythical": false,
+    "color": "white",
+    "genera": ""
+  },
+  {
+    "id": 976,
+    "en": "veluza",
+    "ja": "ミガルーサ",
+    "types": [
+      "water",
+      "psychic"
+    ],
+    "generation": "generation-ix",
+    "height": 25,
+    "weight": 900,
+    "base_stats": {
+      "hp": 90,
+      "attack": 102,
+      "defense": 73,
+      "special_attack": 78,
+      "special_defense": 65,
+      "speed": 70
+    },
+    "abilities": [
+      "かたやぶり",
+      "きれあじ"
+    ],
+    "is_legendary": false,
+    "is_mythical": false,
+    "color": "gray",
+    "genera": ""
+  },
+  {
+    "id": 977,
+    "en": "dondozo",
+    "ja": "ヘイラッシャ",
+    "types": [
+      "water"
+    ],
+    "generation": "generation-ix",
+    "height": 120,
+    "weight": 2200,
+    "base_stats": {
+      "hp": 150,
+      "attack": 100,
+      "defense": 115,
+      "special_attack": 65,
+      "special_defense": 65,
+      "speed": 35
+    },
+    "abilities": [
+      "てんねん",
+      "どんかん",
+      "みずのベール"
+    ],
+    "is_legendary": false,
+    "is_mythical": false,
+    "color": "blue",
+    "genera": ""
+  },
+  {
+    "id": 978,
+    "en": "tatsugiri-curly",
+    "ja": "シャリタツ",
+    "types": [
+      "dragon",
+      "water"
+    ],
+    "generation": "generation-ix",
+    "height": 3,
+    "weight": 80,
+    "base_stats": {
+      "hp": 68,
+      "attack": 50,
+      "defense": 60,
+      "special_attack": 120,
+      "special_defense": 95,
+      "speed": 82
+    },
+    "abilities": [
+      "しれいとう",
+      "よびみず"
+    ],
+    "is_legendary": false,
+    "is_mythical": false,
+    "color": "pink",
+    "genera": ""
+  },
+  {
+    "id": 979,
+    "en": "annihilape",
+    "ja": "コノヨザル",
+    "types": [
+      "fighting",
+      "ghost"
+    ],
+    "generation": "generation-ix",
+    "height": 12,
+    "weight": 560,
+    "base_stats": {
+      "hp": 110,
+      "attack": 115,
+      "defense": 80,
+      "special_attack": 50,
+      "special_defense": 90,
+      "speed": 90
+    },
+    "abilities": [
+      "やるき",
+      "せいしんりょく",
+      "まけんき"
+    ],
+    "is_legendary": false,
+    "is_mythical": false,
+    "color": "gray",
+    "genera": ""
+  },
+  {
+    "id": 980,
+    "en": "clodsire",
+    "ja": "ドオー",
+    "types": [
+      "poison",
+      "ground"
+    ],
+    "generation": "generation-ix",
+    "height": 18,
+    "weight": 2230,
+    "base_stats": {
+      "hp": 130,
+      "attack": 75,
+      "defense": 60,
+      "special_attack": 45,
+      "special_defense": 100,
+      "speed": 20
+    },
+    "abilities": [
+      "どくのトゲ",
+      "ちょすい",
+      "てんねん"
+    ],
+    "is_legendary": false,
+    "is_mythical": false,
+    "color": "brown",
+    "genera": ""
+  },
+  {
+    "id": 981,
+    "en": "farigiraf",
+    "ja": "リキキリン",
+    "types": [
+      "normal",
+      "psychic"
+    ],
+    "generation": "generation-ix",
+    "height": 32,
+    "weight": 1600,
+    "base_stats": {
+      "hp": 120,
+      "attack": 90,
+      "defense": 70,
+      "special_attack": 110,
+      "special_defense": 70,
+      "speed": 60
+    },
+    "abilities": [
+      "はんすう",
+      "テイルアーマー",
+      "そうしょく"
+    ],
+    "is_legendary": false,
+    "is_mythical": false,
+    "color": "brown",
+    "genera": ""
+  },
+  {
+    "id": 982,
+    "en": "dudunsparce-two-segment",
+    "ja": "ノココッチ",
+    "types": [
+      "normal"
+    ],
+    "generation": "generation-ix",
+    "height": 36,
+    "weight": 392,
+    "base_stats": {
+      "hp": 125,
+      "attack": 100,
+      "defense": 80,
+      "special_attack": 85,
+      "special_defense": 75,
+      "speed": 55
+    },
+    "abilities": [
+      "てんのめぐみ",
+      "にげあし",
+      "びびり"
+    ],
+    "is_legendary": false,
+    "is_mythical": false,
+    "color": "yellow",
+    "genera": ""
+  },
+  {
+    "id": 983,
+    "en": "kingambit",
+    "ja": "ドドゲザン",
+    "types": [
+      "dark",
+      "steel"
+    ],
+    "generation": "generation-ix",
+    "height": 20,
+    "weight": 1200,
+    "base_stats": {
+      "hp": 100,
+      "attack": 135,
+      "defense": 120,
+      "special_attack": 60,
+      "special_defense": 85,
+      "speed": 50
+    },
+    "abilities": [
+      "まけんき",
+      "そうだいしょう",
+      "プレッシャー"
+    ],
+    "is_legendary": false,
+    "is_mythical": false,
+    "color": "black",
+    "genera": ""
+  },
+  {
+    "id": 984,
+    "en": "great-tusk",
+    "ja": "イダイナキバ",
+    "types": [
+      "ground",
+      "fighting"
+    ],
+    "generation": "generation-ix",
+    "height": 22,
+    "weight": 3200,
+    "base_stats": {
+      "hp": 115,
+      "attack": 131,
+      "defense": 131,
+      "special_attack": 53,
+      "special_defense": 53,
+      "speed": 87
+    },
+    "abilities": [
+      "こだいかっせい"
+    ],
+    "is_legendary": false,
+    "is_mythical": false,
+    "color": "purple",
+    "genera": ""
+  },
+  {
+    "id": 985,
+    "en": "scream-tail",
+    "ja": "サケブシッポ",
+    "types": [
+      "fairy",
+      "psychic"
+    ],
+    "generation": "generation-ix",
+    "height": 12,
+    "weight": 80,
+    "base_stats": {
+      "hp": 115,
+      "attack": 65,
+      "defense": 99,
+      "special_attack": 65,
+      "special_defense": 115,
+      "speed": 111
+    },
+    "abilities": [
+      "こだいかっせい"
+    ],
+    "is_legendary": false,
+    "is_mythical": false,
+    "color": "pink",
+    "genera": ""
+  },
+  {
+    "id": 986,
+    "en": "brute-bonnet",
+    "ja": "アラブルタケ",
+    "types": [
+      "grass",
+      "dark"
+    ],
+    "generation": "generation-ix",
+    "height": 12,
+    "weight": 210,
+    "base_stats": {
+      "hp": 111,
+      "attack": 127,
+      "defense": 99,
+      "special_attack": 79,
+      "special_defense": 99,
+      "speed": 55
+    },
+    "abilities": [
+      "こだいかっせい"
+    ],
+    "is_legendary": false,
+    "is_mythical": false,
+    "color": "gray",
+    "genera": ""
+  },
+  {
+    "id": 987,
+    "en": "flutter-mane",
+    "ja": "ハバタクカミ",
+    "types": [
+      "ghost",
+      "fairy"
+    ],
+    "generation": "generation-ix",
+    "height": 14,
+    "weight": 40,
+    "base_stats": {
+      "hp": 55,
+      "attack": 55,
+      "defense": 55,
+      "special_attack": 135,
+      "special_defense": 135,
+      "speed": 135
+    },
+    "abilities": [
+      "こだいかっせい"
+    ],
+    "is_legendary": false,
+    "is_mythical": false,
+    "color": "gray",
+    "genera": ""
+  },
+  {
+    "id": 988,
+    "en": "slither-wing",
+    "ja": "チヲハウハネ",
+    "types": [
+      "bug",
+      "fighting"
+    ],
+    "generation": "generation-ix",
+    "height": 32,
+    "weight": 920,
+    "base_stats": {
+      "hp": 85,
+      "attack": 135,
+      "defense": 79,
+      "special_attack": 85,
+      "special_defense": 105,
+      "speed": 81
+    },
+    "abilities": [
+      "こだいかっせい"
+    ],
+    "is_legendary": false,
+    "is_mythical": false,
+    "color": "red",
+    "genera": ""
+  },
+  {
+    "id": 989,
+    "en": "sandy-shocks",
+    "ja": "スナノケガワ",
+    "types": [
+      "electric",
+      "ground"
+    ],
+    "generation": "generation-ix",
+    "height": 23,
+    "weight": 600,
+    "base_stats": {
+      "hp": 85,
+      "attack": 81,
+      "defense": 97,
+      "special_attack": 121,
+      "special_defense": 85,
+      "speed": 101
+    },
+    "abilities": [
+      "こだいかっせい"
+    ],
+    "is_legendary": false,
+    "is_mythical": false,
+    "color": "gray",
+    "genera": ""
+  },
+  {
+    "id": 990,
+    "en": "iron-treads",
+    "ja": "テツノワダチ",
+    "types": [
+      "ground",
+      "steel"
+    ],
+    "generation": "generation-ix",
+    "height": 9,
+    "weight": 2400,
+    "base_stats": {
+      "hp": 90,
+      "attack": 112,
+      "defense": 120,
+      "special_attack": 72,
+      "special_defense": 70,
+      "speed": 106
+    },
+    "abilities": [
+      "クォークチャージ"
+    ],
+    "is_legendary": false,
+    "is_mythical": false,
+    "color": "gray",
+    "genera": ""
+  },
+  {
+    "id": 991,
+    "en": "iron-bundle",
+    "ja": "テツノツツミ",
+    "types": [
+      "ice",
+      "water"
+    ],
+    "generation": "generation-ix",
+    "height": 6,
+    "weight": 110,
+    "base_stats": {
+      "hp": 56,
+      "attack": 80,
+      "defense": 114,
+      "special_attack": 124,
+      "special_defense": 60,
+      "speed": 136
+    },
+    "abilities": [
+      "クォークチャージ"
+    ],
+    "is_legendary": false,
+    "is_mythical": false,
+    "color": "red",
+    "genera": ""
+  },
+  {
+    "id": 992,
+    "en": "iron-hands",
+    "ja": "テツノカイナ",
+    "types": [
+      "fighting",
+      "electric"
+    ],
+    "generation": "generation-ix",
+    "height": 18,
+    "weight": 3807,
+    "base_stats": {
+      "hp": 154,
+      "attack": 140,
+      "defense": 108,
+      "special_attack": 50,
+      "special_defense": 68,
+      "speed": 50
+    },
+    "abilities": [
+      "クォークチャージ"
+    ],
+    "is_legendary": false,
+    "is_mythical": false,
+    "color": "gray",
+    "genera": ""
+  },
+  {
+    "id": 993,
+    "en": "iron-jugulis",
+    "ja": "テツノコウベ",
+    "types": [
+      "dark",
+      "flying"
+    ],
+    "generation": "generation-ix",
+    "height": 13,
+    "weight": 1110,
+    "base_stats": {
+      "hp": 94,
+      "attack": 80,
+      "defense": 86,
+      "special_attack": 122,
+      "special_defense": 80,
+      "speed": 108
+    },
+    "abilities": [
+      "クォークチャージ"
+    ],
+    "is_legendary": false,
+    "is_mythical": false,
+    "color": "blue",
+    "genera": ""
+  },
+  {
+    "id": 994,
+    "en": "iron-moth",
+    "ja": "テツノドクガ",
+    "types": [
+      "fire",
+      "poison"
+    ],
+    "generation": "generation-ix",
+    "height": 12,
+    "weight": 360,
+    "base_stats": {
+      "hp": 80,
+      "attack": 70,
+      "defense": 60,
+      "special_attack": 140,
+      "special_defense": 110,
+      "speed": 110
+    },
+    "abilities": [
+      "クォークチャージ"
+    ],
+    "is_legendary": false,
+    "is_mythical": false,
+    "color": "yellow",
+    "genera": ""
+  },
+  {
+    "id": 995,
+    "en": "iron-thorns",
+    "ja": "テツノイバラ",
+    "types": [
+      "rock",
+      "electric"
+    ],
+    "generation": "generation-ix",
+    "height": 16,
+    "weight": 3030,
+    "base_stats": {
+      "hp": 100,
+      "attack": 134,
+      "defense": 110,
+      "special_attack": 70,
+      "special_defense": 84,
+      "speed": 72
+    },
+    "abilities": [
+      "クォークチャージ"
+    ],
+    "is_legendary": false,
+    "is_mythical": false,
+    "color": "green",
+    "genera": ""
+  },
+  {
+    "id": 996,
+    "en": "frigibax",
+    "ja": "セビエ",
+    "types": [
+      "dragon",
+      "ice"
+    ],
+    "generation": "generation-ix",
+    "height": 5,
+    "weight": 170,
+    "base_stats": {
+      "hp": 65,
+      "attack": 75,
+      "defense": 45,
+      "special_attack": 35,
+      "special_defense": 45,
+      "speed": 55
+    },
+    "abilities": [
+      "ねつこうかん",
+      "アイスボディ"
+    ],
+    "is_legendary": false,
+    "is_mythical": false,
+    "color": "gray",
+    "genera": ""
+  },
+  {
+    "id": 997,
+    "en": "arctibax",
+    "ja": "セゴール",
+    "types": [
+      "dragon",
+      "ice"
+    ],
+    "generation": "generation-ix",
+    "height": 8,
+    "weight": 300,
+    "base_stats": {
+      "hp": 90,
+      "attack": 95,
+      "defense": 66,
+      "special_attack": 45,
+      "special_defense": 65,
+      "speed": 62
+    },
+    "abilities": [
+      "ねつこうかん",
+      "アイスボディ"
+    ],
+    "is_legendary": false,
+    "is_mythical": false,
+    "color": "gray",
+    "genera": ""
+  },
+  {
+    "id": 998,
+    "en": "baxcalibur",
+    "ja": "セグレイブ",
+    "types": [
+      "dragon",
+      "ice"
+    ],
+    "generation": "generation-ix",
+    "height": 21,
+    "weight": 2100,
+    "base_stats": {
+      "hp": 115,
+      "attack": 145,
+      "defense": 92,
+      "special_attack": 75,
+      "special_defense": 86,
+      "speed": 87
+    },
+    "abilities": [
+      "ねつこうかん",
+      "アイスボディ"
+    ],
+    "is_legendary": false,
+    "is_mythical": false,
+    "color": "gray",
+    "genera": ""
+  },
+  {
+    "id": 999,
+    "en": "gimmighoul",
+    "ja": "コレクレー",
+    "types": [
+      "ghost"
+    ],
+    "generation": "generation-ix",
+    "height": 3,
+    "weight": 50,
+    "base_stats": {
+      "hp": 45,
+      "attack": 30,
+      "defense": 70,
+      "special_attack": 75,
+      "special_defense": 70,
+      "speed": 10
+    },
+    "abilities": [
+      "びびり"
+    ],
+    "is_legendary": false,
+    "is_mythical": false,
+    "color": "brown",
+    "genera": ""
+  },
+  {
+    "id": 1000,
+    "en": "gholdengo",
+    "ja": "サーフゴー",
+    "types": [
+      "steel",
+      "ghost"
+    ],
+    "generation": "generation-ix",
+    "height": 12,
+    "weight": 300,
+    "base_stats": {
+      "hp": 87,
+      "attack": 60,
+      "defense": 95,
+      "special_attack": 133,
+      "special_defense": 91,
+      "speed": 84
+    },
+    "abilities": [
+      "おうごんのからだ"
+    ],
+    "is_legendary": false,
+    "is_mythical": false,
+    "color": "yellow",
+    "genera": ""
+  },
+  {
+    "id": 1001,
+    "en": "wo-chien",
+    "ja": "チオンジェン",
+    "types": [
+      "dark",
+      "grass"
+    ],
+    "generation": "generation-ix",
+    "height": 15,
+    "weight": 742,
+    "base_stats": {
+      "hp": 85,
+      "attack": 85,
+      "defense": 100,
+      "special_attack": 95,
+      "special_defense": 135,
+      "speed": 70
+    },
+    "abilities": [
+      "わざわいのおふだ"
+    ],
+    "is_legendary": true,
+    "is_mythical": false,
+    "color": "brown",
+    "genera": ""
+  },
+  {
+    "id": 1002,
+    "en": "chien-pao",
+    "ja": "パオジアン",
+    "types": [
+      "dark",
+      "ice"
+    ],
+    "generation": "generation-ix",
+    "height": 19,
+    "weight": 1522,
+    "base_stats": {
+      "hp": 80,
+      "attack": 120,
+      "defense": 80,
+      "special_attack": 90,
+      "special_defense": 65,
+      "speed": 135
+    },
+    "abilities": [
+      "わざわいのつるぎ"
+    ],
+    "is_legendary": true,
+    "is_mythical": false,
+    "color": "white",
+    "genera": ""
+  },
+  {
+    "id": 1003,
+    "en": "ting-lu",
+    "ja": "ディンルー",
+    "types": [
+      "dark",
+      "ground"
+    ],
+    "generation": "generation-ix",
+    "height": 27,
+    "weight": 6997,
+    "base_stats": {
+      "hp": 155,
+      "attack": 110,
+      "defense": 125,
+      "special_attack": 55,
+      "special_defense": 80,
+      "speed": 45
+    },
+    "abilities": [
+      "わざわいのうつわ"
+    ],
+    "is_legendary": true,
+    "is_mythical": false,
+    "color": "brown",
+    "genera": ""
+  },
+  {
+    "id": 1004,
+    "en": "chi-yu",
+    "ja": "イーユイ",
+    "types": [
+      "dark",
+      "fire"
+    ],
+    "generation": "generation-ix",
+    "height": 4,
+    "weight": 49,
+    "base_stats": {
+      "hp": 55,
+      "attack": 80,
+      "defense": 80,
+      "special_attack": 135,
+      "special_defense": 120,
+      "speed": 100
+    },
+    "abilities": [
+      "わざわいのたま"
+    ],
+    "is_legendary": true,
+    "is_mythical": false,
+    "color": "red",
+    "genera": ""
+  },
+  {
+    "id": 1005,
+    "en": "roaring-moon",
+    "ja": "トドロクツキ",
+    "types": [
+      "dragon",
+      "dark"
+    ],
+    "generation": "generation-ix",
+    "height": 20,
+    "weight": 3800,
+    "base_stats": {
+      "hp": 105,
+      "attack": 139,
+      "defense": 71,
+      "special_attack": 55,
+      "special_defense": 101,
+      "speed": 119
+    },
+    "abilities": [
+      "こだいかっせい"
+    ],
+    "is_legendary": false,
+    "is_mythical": false,
+    "color": "green",
+    "genera": ""
+  },
+  {
+    "id": 1006,
+    "en": "iron-valiant",
+    "ja": "テツノブジン",
+    "types": [
+      "fairy",
+      "fighting"
+    ],
+    "generation": "generation-ix",
+    "height": 14,
+    "weight": 350,
+    "base_stats": {
+      "hp": 74,
+      "attack": 130,
+      "defense": 90,
+      "special_attack": 120,
+      "special_defense": 60,
+      "speed": 116
+    },
+    "abilities": [
+      "クォークチャージ"
+    ],
+    "is_legendary": false,
+    "is_mythical": false,
+    "color": "white",
+    "genera": ""
+  },
+  {
+    "id": 1007,
+    "en": "koraidon",
+    "ja": "コライドン",
+    "types": [
+      "fighting",
+      "dragon"
+    ],
+    "generation": "generation-ix",
+    "height": 25,
+    "weight": 3030,
+    "base_stats": {
+      "hp": 100,
+      "attack": 135,
+      "defense": 115,
+      "special_attack": 85,
+      "special_defense": 100,
+      "speed": 135
+    },
+    "abilities": [
+      "ひひいろのこどう"
+    ],
+    "is_legendary": true,
+    "is_mythical": false,
+    "color": "red",
+    "genera": ""
+  },
+  {
+    "id": 1008,
+    "en": "miraidon",
+    "ja": "ミライドン",
+    "types": [
+      "electric",
+      "dragon"
+    ],
+    "generation": "generation-ix",
+    "height": 35,
+    "weight": 2400,
+    "base_stats": {
+      "hp": 100,
+      "attack": 85,
+      "defense": 100,
+      "special_attack": 135,
+      "special_defense": 115,
+      "speed": 135
+    },
+    "abilities": [
+      "ハドロンエンジン"
+    ],
+    "is_legendary": true,
+    "is_mythical": false,
+    "color": "blue",
+    "genera": ""
+  },
+  {
+    "id": 1009,
+    "en": "walking-wake",
+    "ja": "ウネルミナモ",
+    "types": [
+      "water",
+      "dragon"
+    ],
+    "generation": "generation-ix",
+    "height": 35,
+    "weight": 2800,
+    "base_stats": {
+      "hp": 99,
+      "attack": 83,
+      "defense": 91,
+      "special_attack": 125,
+      "special_defense": 83,
+      "speed": 109
+    },
+    "abilities": [
+      "こだいかっせい"
+    ],
+    "is_legendary": false,
+    "is_mythical": false,
+    "color": "blue",
+    "genera": ""
+  },
+  {
+    "id": 1010,
+    "en": "iron-leaves",
+    "ja": "テツノイサハ",
+    "types": [
+      "grass",
+      "psychic"
+    ],
+    "generation": "generation-ix",
+    "height": 15,
+    "weight": 1250,
+    "base_stats": {
+      "hp": 90,
+      "attack": 130,
+      "defense": 88,
+      "special_attack": 70,
+      "special_defense": 108,
+      "speed": 104
+    },
+    "abilities": [
+      "クォークチャージ"
+    ],
+    "is_legendary": false,
+    "is_mythical": false,
+    "color": "green",
+    "genera": ""
   }
 ]

@@ -11,6 +11,7 @@ const quizRangeTypes = [
     { category: "generation", id: "generation-vi", label: "第6世代"},
     { category: "generation", id: "generation-vii", label: "第7世代"},
     { category: "generation", id: "generation-viii", label: "第8世代"},
+    { category: "generation", id: "generation-ix", label: "第9世代"},
 ];
 
 type PokemonEntry = {
@@ -35,7 +36,7 @@ type PokemonEntry = {
     genera: string;
 }
 
-export default function Game() {
+export default function Quiz() {
     const [selectedQuizRange, setSelectedQuizRange] = useState(quizRangeTypes[1]);
     const [quizPool, setQuizPool] = useState<PokemonEntry[]>([]);
     const [current, setCurrent] = useState<PokemonEntry | null>(null);
@@ -142,7 +143,7 @@ export default function Game() {
                             )}
                             <div className="mb-7 bg-white rounded-2xl pointer-events-none shadow-xl ring-gray-900/5 select-none">
                                 <img
-                                    src={`/sprites/${current.en}.png`}
+                                    src={`/sprites/${current.id}.png`}
                                     alt="シルエット"
                                     className={`w-48 h-48 ${reveald ? "" : "brightness-0"}`}
                                 />
