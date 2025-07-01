@@ -2,6 +2,7 @@ const express = require("express");
 const http = require("http");
 const { Server } = require("socket.io");
 const path = require("path");
+const fs = require("fs");
 
 const app = express();
 const server = http.createServer(app);
@@ -55,6 +56,18 @@ function emitRoomStatus(roomId) {
     }
 }
 
+const pokemonData = JSON.parse(fs.readFileSync(path.join(__dirname, "data", "pokemonNameMap.json")));
+const quizState = {}; // roomId -> { currentQuestion, answered: false }
+
+function getRandomQuestion() {
+    const random = pokemonData[Math.floor(Math.random() * pokemonData.length)];
+    return {
+        id: random.id,
+        ja: random.ja,
+        sprite_url: `/sprites/${random.id}.png`
+    };
+}
+
 app.get("/api/hello", (req, res) => {
     res.json({ message: "サーバーは動作中です！" });
 });
@@ -104,6 +117,47 @@ io.on("connection", (socket) => {
         }
 
         console.log("❌ 切断:", socket.id);
+    });
+
+
+
+    socket.on("quiz-next", ({ roomId }) => {
+        const question = getRandomQuestion();
+        quizState[roomId] = {
+            currentQuestion: question,
+            answered: false,
+        };
+        io.to(roomId).emit("quiz-question", question);
+    });
+
+    socket.on("quiz-answer", ({roomId, answer }) => {
+        const roomQuiz = quizState[roomId];
+        if (roomQuiz && !roomQuiz.answered) {
+            const correct = roomQuiz.currentQuestion.ja;
+            const normalized = answer.replace(/[ぁ-ん]/g, (s) =>
+                String.fromCharCode(s.charCodeAt(0) + 0x60)
+            );
+
+            const normalizedCorrect = correct.replace(/[ぁ-ん]/g, (s) =>
+                String.fromCharCode(s.charCodeAt(0) + 0x60)
+            );
+
+            if (normalized === normalizedCorrect) {
+                roomQuiz.answered = true;
+                const nickname = socket.data.nickname || "名無し";
+                io.to(roomId).emit("quiz-result", {
+                    winnerId: socket.id,
+                    nickname,
+                });
+            }
+        }
+    });
+
+    socket.on("host-id-request", ({ roomId }) => {
+        const room = room[roomId];
+        if (room) {
+            socket.emit("host-id", room.hostId);
+        }
     });
 });
 
