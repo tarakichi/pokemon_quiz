@@ -1,15 +1,15 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import SocketProvider from './contexts/SocketProvider'
-import Lobby from './pages/Lobby'
-import Game from './pages/Game'
+import EnterName from './pages/EnterName';
+import Room from './pages/Room';
 
 function App() {
   return (
     <SocketProvider>
       <BrowserRouter>
         <Routes>
-          <Route path='/' element={<Lobby/>}/>
-          <Route path='/game' element={<Game/>}/>
+          <Route path='/' element={<EnterName/>}/>
+          <Route path='/room/:roomId' element={<Room/>}/>
         </Routes>
       </BrowserRouter>
     </SocketProvider>

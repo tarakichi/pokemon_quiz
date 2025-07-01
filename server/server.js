@@ -15,23 +15,44 @@ const io = new Server(server, {
 
 const PORT = process.env.PORT || 3001;
 
-const colors = ["#f87171", "#60a5fa", "#34d399", "#fbbf24", "#a78bfa"];
-const avatars = [
-    "🐱", "🐶", "🦊", "🐼", "🐧", "🦁", "🐸", "🐰", "🐢", "🐷"
-];
+class Room {
+    constructor(hostId) {
+        this.hostId = hostId;
+        this.users = []; // { id, nickname }
+    }
 
-// app.use(express.static(path.join(__dirname, "..", "client", "dist")));
+    addUser(id, nickname) {
+        this.users.push({ id, nickname });
+    }
 
-// app.get("*", (req, res) => {
-//     res.sendFile(path.join(__dirname, "..", "client", "dist", "index.html"));
-// });
+    removeUser(id) {
+        this.users = this.users.filter(u => u.id !== id);
+    }
 
-let connectedUsers = new Map();
+    getUser(id) {
+        return this.users.find(u => u.id === id);
+    }
 
-function assignColorAndAvatar(socketId) {
-    const color = colors[Math.floor(Math.random() * colors.length)];
-    const avatar = avatars[Math.floor(Math.random() * avatars.length)];
-    return {color , avatar};
+    isEmpty() {
+        return this.users.length === 0;
+    }
+}
+
+const rooms = {}
+
+function createRoomIfNeeded(roomId, hostId) {
+    if (!rooms[roomId]) {
+        rooms[roomId] = new Room(hostId);
+        console.log("ルーム追加:", roomId);
+    }
+}
+
+function emitRoomStatus(roomId) {
+    const room = rooms[roomId];
+    if (room) {
+        io.to(roomId).emit("room-users", room.users);
+        io.to(roomId).emit("host-id", room.hostId);
+    }
 }
 
 app.get("/api/hello", (req, res) => {
@@ -39,37 +60,51 @@ app.get("/api/hello", (req, res) => {
 });
 
 io.on("connection", (socket) => {
-    const { color, avatar } = assignColorAndAvatar(socket.id);
-    const defaultName = `ユーザー${socket.id.slice(0, 4)}`;
-    console.log("🔌 ユーザー接続:", socket.id);
-    connectedUsers.set(socket.id, { name: defaultName, color, avatar });
+    console.log("✅ ユーザー接続:", socket.id);
 
-    sendUserList();
+    socket.on("join-room", ({ roomId, nickname }) => {
+        socket.join(roomId);
+        socket.data.roomId = roomId;
+        socket.data.nickname = nickname;
 
-    io.emit("users", Array.from(connectedUsers.values()));
+        createRoomIfNeeded(roomId, socket.id);
+        rooms[roomId].addUser(socket.id, nickname);
 
-    socket.on("setName", (name) => {
-        const user = connectedUsers.get(socket.id);
-        if (user) {
-            connectedUsers.set(socket.id, { ...user, name });
-            sendUserList();
-        }
+        emitRoomStatus(roomId);
+        socket.emit("your-id", socket.id);
+
+        socket.to(roomId).emit("user-joined", { id: socket.id, nickname });
     });
-    
-    socket.on("chat", (msg) => {
-        console.log("💬 受信:", msg);
-        io.emit("chat", msg);
-    });
-    
+
+    socket.on("start-game", ({ roomId }) => {
+        io.to(roomId).emit("start-game");
+    })
+
     socket.on("disconnect", () => {
+        const roomId = socket.data.roomId;
+        if (roomId && rooms[roomId]) {
+            const room = rooms[roomId];
+            const user = room.getUser(socket.id);
+            room.removeUser(socket.id);
+
+            if (user) {
+                io.to(roomId).emit("user-left", user);
+            }
+
+            if (room.hostId === socket.id) {
+                room.hostId = room.users[0]?.id || null;
+            }
+
+            emitRoomStatus(roomId);
+
+            if (room.users.length === 0) {
+                delete rooms[roomId];
+                console.log("ルーム削除:", roomId);
+            }
+        }
+
         console.log("❌ 切断:", socket.id);
-        connectedUsers.delete(socket.id);
-        io.emit("users", Array.from(connectedUsers.values()));
     });
-    
-    function sendUserList() {
-        io.emit("users", Array.from(connectedUsers.values()));
-    }
 });
 
 server.listen(PORT, () => {
