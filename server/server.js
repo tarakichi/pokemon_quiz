@@ -81,7 +81,9 @@ io.on("connection", (socket) => {
         socket.data.nickname = nickname;
 
         createRoomIfNeeded(roomId, socket.id);
-        rooms[roomId].addUser(socket.id, nickname);
+        if (!rooms[roomId].getUser(socket.id)) {
+            rooms[roomId].addUser(socket.id, nickname);
+        }
 
         emitRoomStatus(roomId);
         socket.emit("your-id", socket.id);
@@ -154,7 +156,7 @@ io.on("connection", (socket) => {
     });
 
     socket.on("host-id-request", ({ roomId }) => {
-        const room = room[roomId];
+        const room = rooms[roomId];
         if (room) {
             socket.emit("host-id", room.hostId);
         }

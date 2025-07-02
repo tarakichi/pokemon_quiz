@@ -1,4 +1,4 @@
-import { useContext, useEffect, useRef, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import SocketContext from "../contexts/SocketContext";
 import { useNavigate, useParams } from "react-router-dom";
 
@@ -15,26 +15,18 @@ export default function Room() {
     const [hostId, setHostId] = useState<string | null>(null);
     const [myId, setMyId] = useState<string | null>(null);
     const nickname = localStorage.getItem("nickname") || "名無し";
-    const hasJoinedRef = useRef(false);
 
     useEffect(() => {
-        if(socket && roomId && !hasJoinedRef.current) {
-            socket.emit("join-room", {roomId, nickname});
-            hasJoinedRef.current = true;
-
-            socket.on("room-users", (UserList: User[]) => {
-                console.log(UserList);
-                setUsers(UserList);
-            });
-
-            socket.on("host-id", (id: string) => {
-                setHostId(id);
-            });
+        if(socket && roomId) {
 
             socket.on("your-id", (id: string) => {
                 setMyId(id);
             });
-
+            
+            socket.on("host-id", (id: string) => {
+                setHostId(id);
+            });
+            
             socket.on("user-joined", (user: User) => {
                 console.log(`🟢 ${user.nickname} が参加しました`);
             });
@@ -42,10 +34,16 @@ export default function Room() {
             socket.on("user-left", (user: User) => {
                 console.log(`🔴 ${user.nickname} が退出しました`);
             });
-
+            
             socket.on("start-game", () => {
                 navigate(`/room/${roomId}/game`);
             });
+            
+            socket.on("room-users", (UserList: User[]) => {
+                setUsers(UserList);
+            });
+            
+            socket.emit("join-room", {roomId, nickname});
 
             return () => {
                 socket.off("room-users");
