@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState } from "react";
+import { useContext, useEffect, useRef, useState } from "react";
 import SocketContext from "../contexts/SocketContext";
 import { useNavigate, useParams } from "react-router-dom";
 
@@ -24,6 +24,7 @@ export default function RoomQuiz() {
     const [result, setResult] = useState<Result | null>(null);
     const [myId, setMyId] = useState<string | null>(null);
     const [isHost, setIsHost] = useState(false);
+    const hasSentInitialQuestion = useRef(false);
 
     const nickname = localStorage.getItem("nickname") || "名無し";
 
@@ -51,6 +52,11 @@ export default function RoomQuiz() {
 
             socket.emit("host-id-request", { roomId });
 
+            if (isHost && !hasSentInitialQuestion.current) {
+                socket.emit("quiz-next", { roomId });
+                hasSentInitialQuestion.current = true;
+            }
+
             return () => {
                 socket.off("quiz-question");
                 socket.off("quiz-result");
@@ -58,7 +64,7 @@ export default function RoomQuiz() {
                 socket.off("host-id");
             };
         }
-    }, [socket, roomId]);
+    }, [socket, roomId, isHost]);
 
     const handleAnswer = () => {
         if (socket && roomId && question && !revealed) {
