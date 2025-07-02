@@ -68,12 +68,40 @@ function getRandomQuestion() {
     };
 }
 
+const MAX_QUESTIONS = 10;
+
 app.get("/api/hello", (req, res) => {
     res.json({ message: "サーバーは動作中です！" });
 });
 
 io.on("connection", (socket) => {
     console.log("✅ ユーザー接続:", socket.id);
+
+    socket.on("quiz-next", ({ roomId }) => {
+        if (!quizState[roomId]) {
+            quizState[roomId] = {
+                count: 0,
+                answered: false,
+            };
+        }
+        quizState[roomId].count ++;
+        console.log("quizState[roomId].count:", quizState[roomId].count);
+        if (quizState[roomId].count > MAX_QUESTIONS) {
+            const scores = rooms[roomId].users.map(u => ({
+                id: u.id,
+                nickname: u.nickname,
+                score: u.score || 0,
+            }));
+            io.to(roomId).emit("quiz-finished", scores);
+            return;
+        }
+        const question = getRandomQuestion();
+        quizState[roomId].currentQuestion = question;
+        quizState[roomId].answered = false;
+        
+        io.to(roomId).emit("quiz-question", question);
+    });
+        
 
     socket.on("join-room", ({ roomId, nickname }) => {
         socket.join(roomId);
@@ -119,17 +147,6 @@ io.on("connection", (socket) => {
         }
 
         console.log("❌ 切断:", socket.id);
-    });
-
-
-
-    socket.on("quiz-next", ({ roomId }) => {
-        const question = getRandomQuestion();
-        quizState[roomId] = {
-            currentQuestion: question,
-            answered: false,
-        };
-        io.to(roomId).emit("quiz-question", question);
     });
 
     socket.on("quiz-answer", ({roomId, answer }) => {

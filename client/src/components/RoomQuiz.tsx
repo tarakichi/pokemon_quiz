@@ -13,6 +13,12 @@ type Result = {
     nickname: string;
 };
 
+type ScoreEntry = {
+    id: string;
+    nickname: string;
+    score: number;
+};
+
 export default function RoomQuiz() {
     const socket = useContext(SocketContext);
     const { roomId } = useParams();
@@ -25,6 +31,8 @@ export default function RoomQuiz() {
     const [myId, setMyId] = useState<string | null>(null);
     const [isHost, setIsHost] = useState(false);
     const hasSentInitialQuestion = useRef(false);
+    const [isFinished, setIsFinished] = useState(false);
+    const [scores, setScores] = useState<ScoreEntry[]>([]);
 
     const nickname = localStorage.getItem("nickname") || "名無し";
 
@@ -57,11 +65,17 @@ export default function RoomQuiz() {
                 hasSentInitialQuestion.current = true;
             }
 
+            socket.on("quiz-finished", (finalScores: ScoreEntry[]) => {
+                setIsFinished(true);
+                setScores(finalScores);
+            });
+
             return () => {
                 socket.off("quiz-question");
                 socket.off("quiz-result");
                 socket.off("your-id");
                 socket.off("host-id");
+                socket.off("quiz-finished");
             };
         }
     }, [socket, roomId, isHost]);
@@ -129,6 +143,25 @@ export default function RoomQuiz() {
                 </>
             ) : (
                 <p>問題を待っています...</p>
+            )}
+            {isFinished && (
+                <div className="mt-6 text-center">
+                    <h2 className="text-xl font-bold mb-4">🎉 ゲーム終了！</h2>
+                    <h3 className="text-lg mb-2">スコア一覧</h3>
+                    <ul className="mb-4">
+                        {scores.map((s) => (
+                            <li key={s.id}>
+                                {s.nickname}: {s.score} 点
+                            </li>
+                        ))}
+                    </ul>
+                    <button
+                        onClick={() => navigate(`/room/${roomId}`)}
+                        className="bg-blue-600 text-white px-4 py-2 rounded"
+                    >
+                        ルームに戻る
+                    </button>
+                </div>
             )}
         </div>
     );
