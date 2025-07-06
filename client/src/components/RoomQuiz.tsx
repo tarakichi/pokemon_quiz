@@ -19,6 +19,12 @@ type ScoreEntry = {
     score: number;
 };
 
+type User = {
+    id: string;
+    nickname: string;
+    score: number;
+};
+
 export default function RoomQuiz() {
     const socket = useContext(SocketContext);
     const { roomId } = useParams();
@@ -33,6 +39,7 @@ export default function RoomQuiz() {
     const hasSentInitialQuestion = useRef(false);
     const [isFinished, setIsFinished] = useState(false);
     const [scores, setScores] = useState<ScoreEntry[]>([]);
+    const [users, setUsers] = useState<User[]>([]);
 
     const nickname = localStorage.getItem("nickname") || "名無し";
 
@@ -68,6 +75,10 @@ export default function RoomQuiz() {
             socket.on("quiz-finished", (finalScores: ScoreEntry[]) => {
                 setIsFinished(true);
                 setScores(finalScores);
+            });
+
+            socket.on("room-users", (userList) => {
+                setUsers(userList);
             });
 
             return () => {
@@ -140,6 +151,18 @@ export default function RoomQuiz() {
                             <p>🏆 最速正解者: {result.nickname}</p>
                         </div>
                     )}
+                    <div>
+                        <h3 className="text-lg font-bold mb-2">参加者一覧（スコア付き）</h3>
+                        <ul className="border rounded p-3 bg-white shadow">
+                            {users
+                                .sort((a, b) => b.score - a.score)
+                                .map((user) => (
+                                    <li key={user.id}>
+                                        {user.nickname}（{user.score}点）
+                                    </li>
+                                ))}
+                        </ul>
+                    </div>
                 </>
             ) : (
                 <p>問題を待っています...</p>

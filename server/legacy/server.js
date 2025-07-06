@@ -19,11 +19,11 @@ const PORT = process.env.PORT || 3001;
 class Room {
     constructor(hostId) {
         this.hostId = hostId;
-        this.users = []; // { id, nickname }
+        this.users = []; // { id, nickname, score }
     }
 
     addUser(id, nickname) {
-        this.users.push({ id, nickname });
+        this.users.push({ id, nickname, score: 0 });
     }
 
     removeUser(id) {
@@ -36,6 +36,13 @@ class Room {
 
     isEmpty() {
         return this.users.length === 0;
+    }
+
+    addScore(id, delta = 1) {
+        const user = this.getUser(id);
+        if (user) {
+            user.score = (user.score || 0) + delta;
+        }
     }
 }
 
@@ -86,12 +93,14 @@ io.on("connection", (socket) => {
         }
         quizState[roomId].count ++;
         console.log("quizState[roomId].count:", quizState[roomId].count);
+        emitRoomStatus(roomId);
         if (quizState[roomId].count > MAX_QUESTIONS) {
             const scores = rooms[roomId].users.map(u => ({
                 id: u.id,
                 nickname: u.nickname,
                 score: u.score || 0,
             }));
+            quizState[roomId].count = 0;
             io.to(roomId).emit("quiz-finished", scores);
             return;
         }
@@ -120,6 +129,11 @@ io.on("connection", (socket) => {
     });
 
     socket.on("start-game", ({ roomId }) => {
+        const room = rooms[roomId];
+        if (room) {
+            room.users.forEach(u => u.score = 0);
+        }
+
         io.to(roomId).emit("start-game");
     })
 
@@ -163,11 +177,14 @@ io.on("connection", (socket) => {
 
             if (normalized === normalizedCorrect) {
                 roomQuiz.answered = true;
+                rooms[roomId].addScore(socket.id);
                 const nickname = socket.data.nickname || "名無し";
                 io.to(roomId).emit("quiz-result", {
                     winnerId: socket.id,
                     nickname,
                 });
+
+                emitRoomStatus(roomId);
             }
         }
     });
