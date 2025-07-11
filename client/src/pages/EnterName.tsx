@@ -40,6 +40,8 @@ export default function EnterName() {
                 setTimeout(() => {
                     navigate(`/room/${roomId}`);
                 }, 300);
+            } else {
+                alert("通信が確立されていません。");
             }
         } else {
             alert("1文字以上の名前を入力してください。");
