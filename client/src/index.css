@@ -6,3 +6,20 @@
 @theme {
     --font-notosans: "Noto Sans", "sans-serif"
 }
+
+.outer-ripple {
+    position: fixed;
+    border-radius: 50%;
+    background-color: rgb(159, 159, 169);
+    transform: scale(0.5);
+    animation: outer-ripple-animation 1500ms ease-out;
+    pointer-events: none;
+    z-index: 0;
+}
+
+@keyframes outer-ripple-animation {
+    to {
+        transform: scale(1.5);
+        opacity: 0;
+    }
+}
