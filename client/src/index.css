@@ -7,6 +7,7 @@
     --font-notosans: "Noto Sans", "sans-serif"
 }
 
+/* EnterName.tsx */
 .outer-ripple {
     position: fixed;
     border-radius: 50%;
@@ -21,5 +22,32 @@
     to {
         transform: scale(1.5);
         opacity: 0;
+    }
+}
+
+.chip {
+    background: #333;
+    color: white;
+    padding: 10px 16px;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    opacity: 1;
+    animation: fadeOut 0.5s ease-in-out 2.5s forwards;
+}
+
+.chip-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 10;
+}
+
+@keyframes fadeOut {
+    to {
+        opacity: 0;
+        transform: translateX(100%);
     }
 }
