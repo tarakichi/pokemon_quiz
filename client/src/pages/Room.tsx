@@ -27,6 +27,12 @@ export default function Room() {
     const nickname = localStorage.getItem("nickname") || "名無し";
     const chipContext = useContext(ChipContext);
 
+    const handleShowChip = (msg: string) => {
+        if (chipContext) {
+            chipContext.showChip(msg);
+        }
+    }
+
     useEffect(() => {
         if(socket && roomId) {
 
@@ -39,16 +45,12 @@ export default function Room() {
             });
             
             socket.on("user-joined", (user: User) => {
-                if (chipContext) {
-                    chipContext.showChip(`🟢 ${user.nickname} が参加しました`);
-                }
+                handleShowChip(`🟢 ${user.nickname} が参加しました`);
                 console.log(`🟢 ${user.nickname} が参加しました`);
             });
             
             socket.on("user-left", (user: User) => {
-                if (chipContext) {
-                    chipContext.showChip(`🔴 ${user.nickname} が退出しました`);
-                }
+                handleShowChip(`🔴 ${user.nickname} が退出しました`);
                 console.log(`🔴 ${user.nickname} が退出しました`);
             });
             
@@ -120,7 +122,7 @@ export default function Room() {
                         ゲーム開始！
                     </button>
                 )}
-                <button onClick={() => chipContext && chipContext.showChip("aiueo")}>showchip</button>
+                <button onClick={() => handleShowChip("aiueo")} className="bg-zinc-300 text-white px-4 py-2">あいうえお</button>
             </motion.div>
         </div>
     );
