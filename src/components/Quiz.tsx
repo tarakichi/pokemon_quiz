@@ -21,6 +21,27 @@ const quizRangeTypes = [
     { category: "basestats", id: "low-200", label: "種族値200以下のポケモン"},
 ];
 
+const poketypes = [
+    { id: "normal", label: "ノーマル" },
+    { id: "fighting", label: "かくとう" },
+    { id: "flying", label: "ひこう" },
+    { id: "poison", label: "どく" },
+    { id: "ground", label: "じめん" },
+    { id: "rock", label: "いわ" },
+    { id: "bug", label: "むし" },
+    { id: "ghost", label: "ゴースト" },
+    { id: "steel", label: "はがね" },
+    { id: "fire", label: "ほのお" },
+    { id: "water", label: "みず" },
+    { id: "grass", label: "くさ" },
+    { id: "electric", label: "でんき" },
+    { id: "psychic", label: "エスパー" },
+    { id: "ice", label: "こおり" },
+    { id: "dragon", label: "ドラゴン" },
+    { id: "dark", label: "あく" },
+    { id: "fairy", label: "フェアリー" },
+]
+
 type PokemonEntry = {
     id: number;
     en: string;
@@ -104,6 +125,13 @@ export default function Quiz() {
         setRevealed(false);
     };
 
+    const handleHint = () => {
+        if (current) {
+            const typeMap = new Map(poketypes.map(({ id, label }) => [id, label]));
+            alert(`タイプ：${current.types.map(id => typeMap.get(id) || id)}`);
+        }
+    }
+
     return (
         <div className="p-4 h-fit w-full">
             <div className="flex flex-col items-center">
@@ -164,6 +192,12 @@ export default function Quiz() {
                                     className={`w-48 h-48 ${revealed ? "" : "brightness-0"}`}
                                 />
                             </div>
+                            <button
+                                className="px-4 py-2 bg-sky-500 text-white rounded-md mb-5"
+                                onClick={handleHint}
+                            >
+                                ヒント
+                            </button>
                             <input
                                 type="text"
                                 value={answer}
