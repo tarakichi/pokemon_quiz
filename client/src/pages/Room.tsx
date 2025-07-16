@@ -108,6 +108,7 @@ export default function Room() {
                         </li>
                     ))}
                 </ul>
+                <p>テスト</p>
                 <h3 className="font-notosans font-bold text-md text-zinc-600">ゲームモード</h3>
                 <div className="w-4/5 flex justify-center items-center overflow-x-auto p-4 border-y border-zinc-200 gap-6">
                     <ul>
