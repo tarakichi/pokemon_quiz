@@ -159,7 +159,7 @@ export default function Quiz() {
                             )}
                             <div className="mb-7 bg-white rounded-2xl pointer-events-none shadow-xl ring-gray-900/5 select-none">
                                 <img
-                                    src={`/sprites/${current.id}.png`}
+                                    src={`sprites/${current.id}.png`}
                                     alt="シルエット"
                                     className={`w-48 h-48 ${revealed ? "" : "brightness-0"}`}
                                 />
