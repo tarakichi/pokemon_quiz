@@ -13,6 +13,7 @@ const quizRangeTypes = [
     { category: "generation", id: "generation-viii", label: "第8世代"},
     { category: "generation", id: "generation-ix", label: "第9世代"},
     { category: "legendary", id: "legendary", label: "伝説のポケモン"},
+    { category: "mythical", id: "mythical", label: "幻のポケモン"},
     { category: "basestats", id: "high-600", label: "種族値600以上のポケモン"},
     { category: "basestats", id: "high-500", label: "種族値500以上のポケモン"},
     { category: "basestats", id: "high-400", label: "種族値400以上のポケモン"},
@@ -77,6 +78,8 @@ export default function Quiz() {
             return pokemonData.filter((p) => p.generation === selectedQuizRange.id);
         } else if (selectedQuizRange.category === "legendary") {
             return pokemonData.filter((p) => p.is_legendary);
+        } else if (selectedQuizRange.category === "mythical") {
+            return pokemonData.filter((p) => p.is_mythical);
         } else if (selectedQuizRange.category === "basestats") {
             const config = selectedQuizRange.id.split("-");
             if (config[0] === "high") {
@@ -128,7 +131,10 @@ export default function Quiz() {
     const handleHint = () => {
         if (current) {
             const typeMap = new Map(poketypes.map(({ id, label }) => [id, label]));
-            alert(`タイプ：${current.types.map(id => typeMap.get(id) || id)}`);
+            alert(`
+                タイプ：${current.types.map(id => typeMap.get(id) || id)}
+                とくせい：${current.abilities}
+                `);
         }
     }
 
