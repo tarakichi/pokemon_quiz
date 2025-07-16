@@ -48,7 +48,7 @@ export default function Quiz() {
     const [quizPool, setQuizPool] = useState<PokemonEntry[]>([]);
     const [current, setCurrent] = useState<PokemonEntry | null>(null);
     const [answer, setAnswer] = useState<string>("");
-    const [reveald, setReveald] = useState<boolean>(false);
+    const [revealed, setRevealed] = useState<boolean>(false);
     const [score, setScore] = useState<number>(0);
     const [isFinished, setIsFinished] = useState<boolean>(false);
     const filteredlList: PokemonEntry[] = useMemo(() => {
@@ -74,18 +74,18 @@ export default function Quiz() {
         setQuizPool(shuffled);
         setCurrent(shuffled[0]);
         setAnswer("");
-        setReveald(false);
+        setRevealed(false);
         setScore(0)
         setIsFinished(false);
     }, [filteredlList]);
 
     const handleSubmit = () => {
-        if (!current || reveald) return;
+        if (!current || revealed) return;
         const normalized = answer.replace(/[ぁ-ん]/g, (s) =>
             String.fromCharCode(s.charCodeAt(0) + 0x60)
         );
         if (normalized === current.ja) {
-            setReveald(true);
+            setRevealed(true);
             setScore((prev) => prev + 1);
         }
         setAnswer("");
@@ -101,7 +101,7 @@ export default function Quiz() {
         setQuizPool(next);
         setCurrent(next[0]);
         setAnswer("");
-        setReveald(false);
+        setRevealed(false);
     };
 
     return (
@@ -140,7 +140,7 @@ export default function Quiz() {
                                     setQuizPool(reshuffled);
                                     setCurrent(reshuffled[0]);
                                     setAnswer("");
-                                    setReveald(false);
+                                    setRevealed(false);
                                     setScore(0);
                                     setIsFinished(false);
                                 }}
@@ -152,7 +152,7 @@ export default function Quiz() {
                     )}
                     {current && (
                         <>
-                            {reveald ? (
+                            {revealed ? (
                                 <p className="text-xl font-notosans font-medium mb-3">{current.ja}</p>
                             ) : (
                                 <p className="text-xl font-notosans font-medium mb-3">???</p>
@@ -161,7 +161,7 @@ export default function Quiz() {
                                 <img
                                     src={`/sprites/${current.id}.png`}
                                     alt="シルエット"
-                                    className={`w-48 h-48 ${reveald ? "" : "brightness-0"}`}
+                                    className={`w-48 h-48 ${revealed ? "" : "brightness-0"}`}
                                 />
                             </div>
                             <input
@@ -170,7 +170,7 @@ export default function Quiz() {
                                 onChange={(e) => setAnswer(e.target.value)}
                                 onKeyDown={(e) => {
                                     if (e.key === "Enter") {
-                                        if (reveald) {
+                                        if (revealed) {
                                             handleNext();
                                         } else {
                                             handleSubmit();
@@ -178,7 +178,7 @@ export default function Quiz() {
                                     }
                                     if (e.ctrlKey && e.key === "Enter") {
                                         e.preventDefault();
-                                        if (!reveald) setReveald(true);
+                                        if (!revealed) setRevealed(true);
                                     }
                                 }}
                                 className="mb-3 border bg-white text-center font-notosans font-medium rounded"
@@ -192,12 +192,12 @@ export default function Quiz() {
                                     回答
                                 </button>
                                 <button
-                                    onClick={() => setReveald(true)}
+                                    onClick={() => setRevealed(true)}
                                     className="bg-gray-500 hover:bg-gray-600 text-white px-4 py-1 rounded font-notosans font-light"
                                 >
                                     答え合わせ
                                 </button>
-                                {reveald && (
+                                {revealed && (
                                     <button
                                         onClick={handleNext}
                                         className="bg-green-500 hover:bg-green-600 text-white px-4 py-1 rounded font-notosans font-light"
