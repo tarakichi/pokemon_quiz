@@ -7,6 +7,12 @@
     --font-notosans: "Noto Sans", "sans-serif"
 }
 
+@layer components {
+    .aiueo {
+        @apply bg-black;
+    }
+}
+
 /* EnterName.tsx */
 .outer-ripple {
     position: fixed;
