@@ -1,7 +1,7 @@
 import express from "express";
 import http from "http";
 import { Server } from "socket.io";
-import setupSocketHandlers from "./socketHandlers";
+import socketHandlers from "./socketHandlers";
 
 const app = express();
 const server = http.createServer(app);
@@ -19,7 +19,7 @@ app.get("/api/hello", (req, res) => {
     res.json({ message: "サーバーは動作中です！" });
 });
 
-setupSocketHandlers(io);
+socketHandlers(io);
 
 server.listen(PORT, () => {
     console.log(`🚀 Server running at http://localhost:${PORT}`);

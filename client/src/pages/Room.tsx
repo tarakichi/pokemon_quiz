@@ -73,7 +73,8 @@ export default function Room() {
                 socket.off("start-game");
             }
         };
-    }, [socket, roomId, nickname, navigate]);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [socket, roomId, nickname]);
 
     const startGame = () => {
         if (socket && roomId) {

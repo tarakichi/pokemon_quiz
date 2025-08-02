@@ -2,7 +2,7 @@ import type { Server, Socket } from "socket.io";
 import roomManager from "./roomManager";
 // import quizManager from "./quizManager";
 
-export default function setupSocketHandlers(io: Server):void {
+export default function socketHandlers(io: Server):void {
     io.on("connection", (socket: Socket) => {
         console.log("✅ ユーザー接続:", socket.id);
 
