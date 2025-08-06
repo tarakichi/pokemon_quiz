@@ -1,6 +1,7 @@
 export type User = {
     id: string;
     nickname: string;
+    icon: string;
     score: number;
 };
 

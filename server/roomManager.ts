@@ -14,7 +14,7 @@ class Room {
     addUser(userId: string, nickname: string) {
         const exists = this.getUser(userId);
         if(!exists) {
-            this.users.push({ id: userId, nickname, score: 0 });
+            this.users.push({ id: userId, icon: `/${Math.floor(Math.random() * 151)}`, nickname, score: 0 });
         }
     }
 
