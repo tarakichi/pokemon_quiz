@@ -65,10 +65,11 @@ function joinRoom(io: Server, roomId: string, userId: string, nickname: string) 
         rooms[roomId] = new Room(roomId, userId);
         console.log("ルーム作成:", roomId);
     }
-    
+
     const room = rooms[roomId];
     room.addUser(userId, nickname);
     io.to(roomId).emit("user-joined", room.getUser(userId));
+    io.to(roomId).emit("your-id", userId);
 
     emitRoomStatus(io, roomId);
 }

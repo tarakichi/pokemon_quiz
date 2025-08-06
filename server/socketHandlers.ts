@@ -10,11 +10,11 @@ export default function socketHandlers(io: Server):void {
         socket.on("join-room", ({ roomId, nickname }: { roomId: string; nickname: string}) => {
             socket.join(roomId);
             socket.data.roomId = roomId;
-            socket.data.nickname = nickname;
+            // socket.data.nickname = nickname;
 
             roomManager.joinRoom(io, roomId, socket.id, nickname);
-            socket.emit("your-id", socket.id);
         });
+
         //クイズ関連イベント
         // socket.on("quiz-next", ({ roomId }: {roomId: string}) => {
         //     quizManager.sendNextQuestion(io, roomId);
