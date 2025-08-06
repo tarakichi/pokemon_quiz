@@ -2,12 +2,12 @@ import { Server } from "socket.io";
 import { User } from "./types";
 
 class Room {
-    id: string;
+    roomId: string;
     hostId: string;
     users: User[] = [];
 
-    constructor(id: string, hostId: string) {
-        this.id = id;
+    constructor(roomId: string, hostId: string) {
+        this.roomId = roomId;
         this.hostId = hostId;
     }
 
@@ -37,7 +37,7 @@ class Room {
         return this.users;
     }
 
-    addScore(userId: string, delta = 1) {
+    addScore(userId: string, delta: number = 1) {
         const user = this.getUser(userId);
         if (user) {
             user.score += delta;
@@ -51,28 +51,26 @@ class Room {
 
 const rooms: Record<string, Room> = {};
 
-function getOrCreateRoom(roomId: string, hostId: string) {
-    if (!rooms[roomId]) {
-        rooms[roomId] = new Room(roomId, hostId);
-        console.log("ルーム作成:", roomId);
-    }
-    return rooms[roomId];
-}
-
 function emitRoomStatus(io: Server, roomId: string) {
     const room = rooms[roomId];
     if (room) {
-        io.to(roomId).emit("room-users", room.users);
+        //ホストIDとルームのユーザーデータを送信
         io.to(roomId).emit("host-id", room.hostId);
+        io.to(roomId).emit("room-users", room.users);
     }
 }
 
 function joinRoom(io: Server, roomId: string, userId: string, nickname: string) {
-    const room = getOrCreateRoom(roomId, userId);
+    if (!rooms[roomId]) {
+        rooms[roomId] = new Room(roomId, userId);
+        console.log("ルーム作成:", roomId);
+    }
+    
+    const room = rooms[roomId];
     room.addUser(userId, nickname);
+    io.to(roomId).emit("user-joined", room.getUser(userId));
 
     emitRoomStatus(io, roomId);
-    io.to(roomId).emit("user-joined", { id: userId, nickname });
 }
 
 function leaveRoom(io: Server, roomId: string, userId: string) {
@@ -100,8 +98,8 @@ function addScore(io: Server, roomId: string, userId: string, delta?: number) {
 }
 
 export default {
+    emitRoomStatus,
     joinRoom,
     leaveRoom,
-    emitRoomStatus,
     addScore,
 }
