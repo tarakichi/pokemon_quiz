@@ -9,8 +9,6 @@ export default function socketHandlers(io: Server):void {
         //ルーム関連イベント
         socket.on("join-room", ({ roomId, nickname }: { roomId: string; nickname: string}) => {
             socket.join(roomId);
-            // socket.data.roomId = roomId;
-            // socket.data.nickname = nickname;
 
             roomManager.joinRoom(io, roomId, socket.id, nickname);
         });
@@ -22,7 +20,6 @@ export default function socketHandlers(io: Server):void {
 
         //切断処理
         socket.on("disconnecting", () => {
-            // const roomId = socket.data.roomId;
             for (const roomId of socket.rooms) {
                 if (roomId !== socket.id) {
                     roomManager.leaveRoom(io, roomId, socket.id);
