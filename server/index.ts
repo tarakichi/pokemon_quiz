@@ -1,26 +1,33 @@
 import express from "express";
-import http from "http";
-import { Server } from "socket.io";
-import socketHandlers from "./socketHandlers";
+import { createServer } from "http";
+import { Server, Socket } from "socket.io";
+
+interface ClientToServerEvents {
+    message: (msg: string) => void;
+}
+interface ServerToClientEvents {
+    message: (msg: string) => void;
+}
 
 const app = express();
-const server = http.createServer(app);
-const io = new Server(server, {
-    cors: {
-        origin: "http://localhost:5173",
-        methods: ["GET", "POST"],
-        credentials: true,
-    },
+const httpServer = createServer(app);
+const io = new Server<ClientToServerEvents, ServerToClientEvents>(httpServer,{
+    cors: { origin: "*" },
 });
 
-const PORT = process.env.PORT || 3001;
+io.on("connection", (socket: Socket<ClientToServerEvents, ServerToClientEvents>) => {
+    console.log("User connected:", socket.id);
 
-app.get("/api/hello", (req, res) => {
-    res.json({ message: "サーバーは動作中です！" });
+    socket.on("message", (msg: string) => {
+        io.emit("message", msg);
+    });
+
+    socket.on("disconnect", () => {
+        console.log("User disconnected:", socket.id);
+    });
 });
 
-socketHandlers(io);
-
-server.listen(PORT, () => {
-    console.log(`🚀 Server running at http://localhost:${PORT}`);
-})
+const PORT = process.env.PORT || 3000;
+httpServer.listen(PORT, () => {
+    console.log(`Server running on port ${PORT}`);
+});
