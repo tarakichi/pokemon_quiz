@@ -10,8 +10,8 @@ const SocketProvider: React.FC<Props> = ({ children }) => {
     const [socketInstance, setSocketInstance] = useState<Socket | null>(null);
     
     useEffect(() => {
-        // const socket = io("http://192.168.0.6:3001", {
-        const socket = io("http://localhost:3001", {
+        // const socket = io("http://192.168.0.6:3000", {
+        const socket = io(`http://localhost:3000`, {
             withCredentials: true,
             transports: ["websocket", "polling"],
             reconnection: true,

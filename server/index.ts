@@ -22,12 +22,12 @@ io.on("connection", (socket: Socket<ClientToServerEvents, ServerToClientEvents>)
         io.emit("message", msg);
     });
 
-    socket.on("disconnect", () => {
+    socket.on("disconnecting", () => {
         console.log("User disconnected:", socket.id);
     });
 });
 
-const PORT = process.env.PORT || 3000;
+const PORT = 3000;
 httpServer.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
 });
